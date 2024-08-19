@@ -33,11 +33,12 @@
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   position: relative;
-  z-index: 4;
+  scroll-padding-top: 50px;
 }
 .screen {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 50px);
+  /* height: 100vh; */
   overflow: hidden;
   scroll-snap-align: start;
 
@@ -58,7 +59,6 @@
   padding-right: 10px;
   font-size: 20px;
   position: sticky;
-  z-index: 2;
   top: 0px;
 }
 #header-title{
@@ -73,9 +73,11 @@
   justify-content: center;
   align-items: center;
   display: grid;
+  /* margin-top: -50px; */
   grid-template-columns: 100vw;
-  grid-template-rows: calc(100vh - 400px) 400px;
+  grid-template-rows: calc(100vh - 400px) calc(400px - var(--header-Size));
   overflow: hidden;
+  z-index: 3;
 }
 .landing img {
   max-width: none;
@@ -184,4 +186,164 @@ width: vw;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#cacao {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: auto auto;
+  overflow: hidden;
+}
+#cacaoText{
+  grid-column: 1 /2;
+  grid-row: 1 / 2;
+  font-weight: 450;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#cacao img {
+  max-width: none;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  align-self: start;
+  justify-self: center;
+}
+#cacao button {
+  grid-column: 1 /2;
+  grid-row:  2 / 3;
+  align-self: flex-start;
+  justify-self: end;
+  background-color: var(--tan);
+  border: var(--green) 2px solid;
+  padding: 8px;
+  margin: 15px;
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 15px;
+}
+
+#discoverPurpose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+}
+#discoverPurpose h2{
+  font-size: 25px;
+  font-weight: 800;
+}
+#discoverContent {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  justify-items: center;
+  font-size: 2vh;
+  font-weight: 500;
+  padding: 10px;
+}
+.discoverText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 4vh;
+}
+.discoverTitle {
+  font-size: 2.5vh;
+  font-weight: 550;
+}
+#essenceWithin {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: auto 100vw;
+}
+#essenceText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 2.7vh;
+  font-weight: 550px;
+  padding: 10px;
+}
+#essenceText h2 {
+  font-size: 6vh;
+  font-weight: 700;
+}
+#connect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 550;
+}
+#connect h2{
+  font-size: 30px;
+  font-weight: 800;
+
+}
+#connect h3{
+  font-size: 30px;
+  font-weight: 700px;
+  text-decoration: underline;
+}
+#connectForm {
+  display: grid;
+  width: 100vw;
+  padding: 10px;
+  grid-template-columns: 48% 4% 48%;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  font-size: 16px;
+  font-weight: 500;
+}
+#connectForm label span {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+#FNLabel {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+#firstName {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+#LNLabel {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+#lastName {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+#ELabel {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+}
+#email {
+  grid-column: 1 / 4;
+  grid-row: 4 / 5;
+}
+#MLabel {
+  grid-column: 1 / 4;
+  grid-row: 5 / 6;
+}
+#message {
+  grid-column: 1 / 4;
+  grid-row: 6 / 7;
+}
+#submit {
+  grid-column: 1 / 2;
+  grid-row: 7 / 8;
+  justify-self: start;
+  border: var(--green) 1px solid;
+  padding: 5px;
+  margin-top: 10px;
+}
+.mt-5 {
+  margin-top: 5px;
 }

@@ -1,8 +1,9 @@
 'use client'
 import Image from "next/image";
 import { useEffect, useState, useContext } from "react";
-import { ScrollContext } from "./layout";
 import YogaLotusSvg from "./components/yogaLotusSvg";
+import ContactForm from "./components/contactForm";
+import { InstagramEmbed } from "react-social-media-embed";
 
 export default function Home() {
   const [vw, setVw] = useState(700);
@@ -10,9 +11,7 @@ export default function Home() {
   const [isMobile, setIsMobile] = useState(true);
   const headerSize = 50;
   const getWindowSize = () => {
-    console.log("inner: ", window.innerHeight)
-    console.log("outer: ", window.outerHeight)
-    setVh(window.outerHeight);
+    setVh(window.innerHeight);
     setVw(window.innerWidth);
     setIsMobile(window.innerWidth <= 768);
   }
@@ -27,8 +26,8 @@ export default function Home() {
   }, [vh, vw])
 
   return (
-    <div id="home" onScroll={useContext(ScrollContext)}>
-    <div className="landing screen">
+    <>
+    <div className="landing screen ">
         <Image
         alt="Jenn Daniel meditating"
         src={'/Jenn-outdoors.jpeg'}
@@ -88,8 +87,98 @@ export default function Home() {
         <YogaLotusSvg color="white" fill="white" height={vh -(vw/.75) - headerSize - 10} width={vw - 10}/>
       </div>
     </div>
-    <div className="screen hp" >
-    </div>
-    </div>
+    <div className="screen hp" id="cacao">
+      <div id="cacaoText">
+        <span>
+        Cacao, the purest form of chocolate, is packed with antioxidants that help reduce inflammation and improve heart health. It is rich in minerals such as magnesium, iron, and calcium, which are essential for various bodily functions. Cacao is known to boost mood by increasing serotonin levels in the brain, promoting a sense of well-being. Additionally, its natural compounds can enhance focus and cognitive function. Consuming cacao in moderation can be a delicious way to reap these health benefits and indulge in a guilt-free treat. The spiritual benefits of this plant medicine help us to connect to our intuition, higher self and opens our heart to discover our true desires and purpose. All cacao used in ceremonies is sourced from Cacaoandi.
+        </span>
+        <span>
+       Use code Jennben15 for a discount when you purchase directly from their site.
+        </span>
+      </div>
+      <Image
+        src={"/cacao/pouring.jpeg"}
+        alt="cacao"
+        height={0}
+        width={0}
+        loading="lazy"
+        sizes="{max-width: 10000px}"
+        style={{height: vh-400, width: 'auto'}}
+      />
+      <button>Purchase <br/>from <br/>Cacaoandi</button>
+      </div>
+      <div className="screen hp" id="discoverPurpose">
+        <h2>Discover Your True Purpose</h2>
+        <div id="discoverContent">
+          <Image
+            src={'/Jenn-bowls-cropped.jpg'}
+            alt="Jenn with sound bowls"
+            width={vh / 6}
+            height={vh / 6}
+          />
+          <div className="discoverText">
+            <span className="discoverTitle">
+              Private and Group Sound Baths
+            </span>
+            <span>
+              Uncover the essence of your being through this transformative experience.
+            </span>
+          </div>
+          <div className="discoverText">
+            <span className="discoverTitle">
+              Private and Group Cacao Ceremonies. Learn how to create your own ritual.
+            </span>
+            <span>
+              Embark on a path of self-discovery with expert guidance.
+            </span>
+          </div>
+          <Image
+            src={'/Jenn-above.jpg'}
+            alt="Jenn with cacao"
+            height={vh / 6}
+            width={vh / 6}
+          />
+          <Image
+            src={'/Jenn-bending-cropped.JPEG'}
+            alt="Jenn bending in yoga pose"
+            height={vh / 6}
+            width={vh / 6}
+          />
+          <div className="discoverText">
+            <span className="discoverTitle">
+            Nourish your soul with movement and Yoga Nidra Meditation. Private and group rates available.
+            </span>
+            <span>
+            Align your mind, body, and spirit in harmony with the universe.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="screen hp" id="essenceWithin">
+        <div id="essenceText">
+        <h2>Unveiling the essence within</h2>
+        <span>
+        Embark on a transformative journey to align with your soul&apos;s purpose, uncovering the path to inner peace and fulfillment. Embrace the power of self-discovery through the ancient wisdom of yoga, powerful rituals with Cacao and the healing benefit of sound frequency.
+        </span>
+        </div>
+        <Image
+        src={'/bowls-cropped.JPEG'}
+        alt="sound bath bowls"
+        height={0}
+        width={0}
+        sizes="{max-width: 1000px}"
+        style={{height: 'auto', width: vw}}
+        />
+      </div>
+      <div className="screen hp" id="connect">
+        <h2>Discover your soulful journey</h2>
+        <InstagramEmbed url="https://www.instagram.com/soulful_sankalpa/" width={vw * .8}/>
+        <h3>Connect with Soulful Sankalpa</h3>
+        <div>
+        Are you open to explore the transformative path together? Share a bit about yourself, and we will reach out with purpose. Eagerly awaiting your message!
+        </div>
+        <ContactForm />
+      </div>
+    </>
   );
 }
