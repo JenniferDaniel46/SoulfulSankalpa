@@ -62,7 +62,7 @@
   top: 0px;
 }
 #header-title{
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
 }
 #header-menu {
@@ -272,22 +272,41 @@ width: vw;
   font-size: 6vh;
   font-weight: 700;
 }
+
 #connect {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5px;
   font-size: 16px;
   font-weight: 550;
+
+  gap: 40px;
+}
+
+#instaSVG {
+  height: calc(100vh - 80vw - var(--header-Size) - 180px);
+  background-color: var(--green);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-self: flex-end;
 }
 #connect h2{
-  font-size: 30px;
+  font-size: 7vw;
   font-weight: 800;
 
 }
-#connect h3{
-  font-size: 30px;
-  font-weight: 700px;
+#sendMessage {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+#sendMessage h3{
+  font-size: 7vw;
+  font-weight: 800;
   text-decoration: underline;
 }
 #connectForm {
@@ -295,7 +314,7 @@ width: vw;
   width: 100vw;
   padding: 10px;
   grid-template-columns: 48% 4% 48%;
-  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto 28vh auto;
   font-size: 16px;
   font-weight: 500;
 }
@@ -344,6 +363,41 @@ width: vw;
   padding: 5px;
   margin-top: 10px;
 }
+#sending {
+  grid-column: 1 / 2;
+  grid-row: 7 / 8;
+  margin-top: 10px;
+}
+#messageFooter{
+  display: flex;
+  width: 100vw;
+  padding: 5px;
+  justify-content: space-between;
+  font-size: 18px;
+}
 .mt-5 {
   margin-top: 5px;
+}
+.h-100 {
+   height: 400px;
+   background-color: var(--green);
+}
+.w-100 {
+  width: 100vw;;
+}
+.messageResponse {
+  grid-column: 3 / 4;
+  grid-row: 7 / 8;
+  margin-top: 10px;
+  align-self: center;
+  justify-self: center;
+}
+#calendar {
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
 }

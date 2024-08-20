@@ -1,4 +1,8 @@
 import { useState, ChangeEvent, FormEvent } from "react";
+import axios from "axios";
+import { CircularProgress } from "@mui/material";
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 interface FormData {
   firstName: string;
@@ -14,7 +18,10 @@ export default function ContactForm() {
     email: "",
     message: "",
   });
-
+  const[disableButton, setDisableButton] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error,  setError] = useState(false);
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -24,8 +31,34 @@ export default function ContactForm() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSending(true)
+    setSuccess(false)
+    setError(false)
+    setDisableButton(true)
+    axios.post('https://api.emailjs.com/api/v1.0/email/send', {
+      service_id: "service_4c6zw4o",
+      template_id: "template_zkbm4gg",
+      user_id: "7TjQL62Z7uX_jNBz5",
+      template_params: {
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        email_address: formData.email,
+        message: formData.message
+      }
+
+    }).then(res => {
+    setSending(false);
+    console.log(res);
+    setDisableButton(false);
+    setSuccess(true);
+
+    }).catch(e => {
+      console.log(e);
+    setSending(false);
+    setDisableButton(false);
+    setError(true);
+  })
     // Handle form submission logic here (e.g., send data to an API endpoint)
-    console.log(formData);
   };
 
   return (
@@ -92,12 +125,31 @@ export default function ContactForm() {
           className="mt-5"
           required
         />
-
-      <button
-      type="submit"
-      id="submit"
-      className="mt-5"
-      >Submit</button>
+        {sending ?
+        <div id="sending">
+          <CircularProgress color="success"/>
+        </div>:
+        <button
+        type="submit"
+        id="submit"
+        className="mt-5"
+        disabled={disableButton}
+        >Submit</button>
+        }
+        {success ?
+        <div className="messageResponse">
+          <CheckCircleOutlineIcon />
+          Message Sent Succesfully!
+        </div>
+        :
+        null}
+        {error ?
+        <div className="messageResponse">
+          <ErrorOutlineIcon />
+          Error Sending Message
+        </div>
+        :
+        null}
     </form>
   );
 }
