@@ -1,0 +1,39 @@
+
+#cacao {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: auto auto;
+  overflow: hidden;
+}
+
+#cacaoText {
+  grid-column: 1 /2;
+  grid-row: 1 / 2;
+  font-weight: 450;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#cacao img {
+  max-width: none;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  align-self: start;
+  justify-self: center;
+}
+
+#cacao a {
+  grid-column: 1 /2;
+  grid-row: 2 / 3;
+  align-self: flex-start;
+  justify-self: end;
+  background-color: var(--tan);
+  border: var(--green) 2px solid;
+  padding: 8px;
+  margin: 15px;
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 15px;
+}

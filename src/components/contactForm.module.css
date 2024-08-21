@@ -1,0 +1,80 @@
+
+
+#connectForm {
+  display: grid;
+  width: 100vw;
+  padding: 10px;
+  grid-template-columns: 48% 4% 48%;
+  grid-template-rows: auto auto auto auto auto 28vh auto;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#connectForm label span {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+#FNLabel {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#firstName {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+#LNLabel {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+#lastName {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+#ELabel {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+}
+
+#email {
+  grid-column: 1 / 4;
+  grid-row: 4 / 5;
+}
+
+#MLabel {
+  grid-column: 1 / 4;
+  grid-row: 5 / 6;
+}
+
+#message {
+  grid-column: 1 / 4;
+  grid-row: 6 / 7;
+}
+
+#submit {
+  grid-column: 1 / 2;
+  grid-row: 7 / 8;
+  justify-self: start;
+  border: var(--green) 1px solid;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#sending {
+  grid-column: 1 / 2;
+  grid-row: 7 / 8;
+  margin-top: 10px;
+}
+
+
+.messageResponse {
+  grid-column: 3 / 4;
+  grid-row: 7 / 8;
+  margin-top: 10px;
+  align-self: center;
+  justify-self: center;
+}

@@ -1,8 +1,8 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* @tailwind components; */
+/* @tailwind utilities; */
 
-@font-face{
+@font-face {
   font-family: "Aboshi One";
   src: "../public/AboshiOne-Regular.ttf";
 }
@@ -28,25 +28,40 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
 #home {
   height: 100vh;
   overflow-y: scroll;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
   position: relative;
   scroll-padding-top: 50px;
 }
+
 .screen {
   width: 100vw;
-  height: calc(100vh - 50px);
-  /* height: 100vh; */
+  height: calc(100vh - var(--header-Size));
   overflow: hidden;
   scroll-snap-align: start;
-
 }
+
 .hp {
   margin-top: var(--header-Size);
-  /* padding-top: var(--header-Size); */
 }
+
+.bg-green {
+  background-color: var(--green);
+}
+
+.min-height {
+  height: min-content;
+}
+
+.dim-background {
+  background-color: rgba(0, 0, 0, 0.356);
+
+}
+
 #header {
   height: var(--header-Size);
   width: 100vw;
@@ -56,20 +71,37 @@
   align-items: center;
   justify-content: space-between;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 30px;
   font-size: 20px;
   position: sticky;
   top: 0px;
 }
-#header-title{
+
+#header-title {
   font-size: 30px;
   font-weight: bold;
 }
+
 #header-menu {
   text-decoration: underline;
 }
-.landing {
-  color:var(--green);
+
+#drawer {
+  background-color: var(--tan);
+  color: var(--green);
+  /* width: 50px; */
+  height: 100vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: underline;
+  font-size: 22px;
+  font-weight: 700;
+  gap: 25px;
+}
+
+#landing {
+  color: var(--green);
   justify-content: center;
   align-items: center;
   display: grid;
@@ -79,13 +111,58 @@
   overflow: hidden;
   z-index: 3;
 }
-.landing img {
+
+#landingDesk {
+  display: grid;
+  grid-template-columns: 70vw 30vw;
+  grid-template-rows: min-content 35vh auto;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+}
+
+#landingDesk img {
+  display: flex;
+  max-width: none;
+  max-height: none;
+  grid-column: 1 / 3;
+  grid-row: 1 / 4;
+  justify-self: center;
+  margin-top: calc(0px - 25vw);
+  height: calc(100vh - 400px);
+}
+
+#landingDesk #title {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+#landingDesk #title h1 {
+  font-size: 55px;
+}
+
+#landingDesk #landing-text {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  background-color: transparent;
+  color: white;
+  align-items: start;
+  justify-self: start;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.486);
+  margin-right: 30px;
+  margin-bottom: 20px;
+  height: min-content;
+}
+
+#landing img {
   max-width: none;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   align-self: start;
   justify-self: center;
 }
+
 #title {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -95,14 +172,17 @@
   align-self: baseline;
   margin-top: 25px;
 }
+
 #title h1 {
   font-size: 40px;
   font-weight: bold;
 }
+
 #title h2 {
   font-size: 25px;
   font-weight: bold;
 }
+
 #landing-text {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
@@ -114,290 +194,4 @@
   text-align: center;
   display: flex;
   align-items: center;
-}
-
-#soulful-def-page {
-  display: grid;
-  grid-template-columns: 100vw;
-  grid-template-rows: calc(800px - var(--header-Size)) calc(vh - 800px - var(--header-Size));
-}
-
-#soulful-def-page {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-#soulful-def-page img{
-grid-column: 1 / 2;
-grid-row: 2 / 3;
-align-self: end;
-justify-self: center;
-max-width: none;
-width: vw;
-}
-#soulful-def {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10px;
-  gap: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  text-align: center;
-}
-#soulful-def-title {
-  font-size: 40px;
-  font-weight:500;
-}
-#soulful-def-content {
-  font-size: 2.2vh;
-  justify-self: center;
-  align-items: center;
-  overflow-y: hidden;
-}
-#relaxation {
-  display: grid;
-  grid-template-columns: 100vw;
-  grid-template-rows: calc(100vw / .75)  auto;
-}
-#relaxation img {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-#relaxationText {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  color: var(--white);
-  text-align: center;
-  font-weight: 500;
-  font-size: 3vh;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.308);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-}
-#relaxationSvg {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  background-color: var(--green);
-  height: calc(100vh - calc(100vw / .75) - var(--header-Size));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#cacao {
-  display: grid;
-  grid-template-columns: 100vw;
-  grid-template-rows: auto auto;
-  overflow: hidden;
-}
-#cacaoText{
-  grid-column: 1 /2;
-  grid-row: 1 / 2;
-  font-weight: 450;
-  font-size: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-#cacao img {
-  max-width: none;
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  align-self: start;
-  justify-self: center;
-}
-#cacao button {
-  grid-column: 1 /2;
-  grid-row:  2 / 3;
-  align-self: flex-start;
-  justify-self: end;
-  background-color: var(--tan);
-  border: var(--green) 2px solid;
-  padding: 8px;
-  margin: 15px;
-  font-size: 18px;
-  font-weight: 550;
-  line-height: 15px;
-}
-
-#discoverPurpose {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  /* padding-left: 10px;
-  padding-right: 10px; */
-}
-#discoverPurpose h2{
-  font-size: 25px;
-  font-weight: 800;
-}
-#discoverContent {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
-  align-items: center;
-  justify-items: center;
-  font-size: 2vh;
-  font-weight: 500;
-  padding: 10px;
-}
-.discoverText {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 4vh;
-}
-.discoverTitle {
-  font-size: 2.5vh;
-  font-weight: 550;
-}
-#essenceWithin {
-  display: grid;
-  grid-template-columns: 100vw;
-  grid-template-rows: auto 100vw;
-}
-#essenceText {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-size: 2.7vh;
-  font-weight: 550px;
-  padding: 10px;
-}
-#essenceText h2 {
-  font-size: 6vh;
-  font-weight: 700;
-}
-
-#connect {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 550;
-
-  gap: 40px;
-}
-
-#instaSVG {
-  height: calc(100vh - 80vw - var(--header-Size) - 180px);
-  background-color: var(--green);
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  justify-self: flex-end;
-}
-#connect h2{
-  font-size: 7vw;
-  font-weight: 800;
-
-}
-#sendMessage {
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-}
-#sendMessage h3{
-  font-size: 7vw;
-  font-weight: 800;
-  text-decoration: underline;
-}
-#connectForm {
-  display: grid;
-  width: 100vw;
-  padding: 10px;
-  grid-template-columns: 48% 4% 48%;
-  grid-template-rows: auto auto auto auto auto 28vh auto;
-  font-size: 16px;
-  font-weight: 500;
-}
-#connectForm label span {
-  font-size: 12px;
-  margin-left: 5px;
-}
-
-#FNLabel {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-#firstName {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-#LNLabel {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-}
-#lastName {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-#ELabel {
-  grid-column: 1 / 4;
-  grid-row: 3 / 4;
-}
-#email {
-  grid-column: 1 / 4;
-  grid-row: 4 / 5;
-}
-#MLabel {
-  grid-column: 1 / 4;
-  grid-row: 5 / 6;
-}
-#message {
-  grid-column: 1 / 4;
-  grid-row: 6 / 7;
-}
-#submit {
-  grid-column: 1 / 2;
-  grid-row: 7 / 8;
-  justify-self: start;
-  border: var(--green) 1px solid;
-  padding: 5px;
-  margin-top: 10px;
-}
-#sending {
-  grid-column: 1 / 2;
-  grid-row: 7 / 8;
-  margin-top: 10px;
-}
-#messageFooter{
-  display: flex;
-  width: 100vw;
-  padding: 5px;
-  justify-content: space-between;
-  font-size: 18px;
-}
-.mt-5 {
-  margin-top: 5px;
-}
-.h-100 {
-   height: 400px;
-   background-color: var(--green);
-}
-.w-100 {
-  width: 100vw;;
-}
-.messageResponse {
-  grid-column: 3 / 4;
-  grid-row: 7 / 8;
-  margin-top: 10px;
-  align-self: center;
-  justify-self: center;
-}
-#calendar {
-  font-size: 30px;
-  font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-
 }

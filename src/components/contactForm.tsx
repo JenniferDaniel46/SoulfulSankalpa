@@ -3,6 +3,8 @@ import axios from "axios";
 import { CircularProgress } from "@mui/material";
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
+import globalStyle from "../app/global.module.css";
+import style from "./contactForm.module.css";
 
 interface FormData {
   firstName: string;
@@ -62,89 +64,89 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} id="connectForm">
+    <form onSubmit={handleSubmit} id={style.connectForm}>
         <label
-        htmlFor="firstName"
-        id="FNLabel"
-        className="mt-5"
+        htmlFor={style.firstName}
+        id={style.FNLabel}
+        className={globalStyle.mt5}
         >First Name
           <span>(required)</span>
         </label>
         <input
           type="text"
-          id="firstName"
+          id={style.firstName}
           name="firstName"
           value={formData.firstName}
           onChange={handleChange}
           placeholder="Frist Name"
-          className="mt-5"
+          className={globalStyle.mt5}
           required
         />
 
         <label
-        htmlFor="lastName"
-        id="LNLabel"
-        className="mt-5"
+        htmlFor={style.lastName}
+        id={style.LNLabel}
+        className={globalStyle.mt5}
         >Last Name </label>
         <input
           type="text"
-          id="lastName"
+          id={style.lastName}
           name="lastName"
           value={formData.lastName}
           onChange={handleChange}
-          className="mt-5"
+          className={globalStyle.mt5}
           placeholder="Last Name"
         />
 
         <label
-        htmlFor="email"
-        id="ELabel"
-        className="mt-5"
+        htmlFor={style.email}
+        id={style.ELabel}
+        className={globalStyle.mt5}
         >Email <span>(required)</span></label>
         <input
           type="email"
-          id="email"
+          id={style.email}
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className="mt-5"
+          className={globalStyle.mt5}
           placeholder="Email"
           required
         />
 
         <label
-        htmlFor="message"
-        id="MLabel"
-        className="mt-5"
+        htmlFor={style.message}
+        id={style.MLabel}
+        className={globalStyle.mt5}
         >Message <span>(required)</span></label>
         <textarea
-          id="message"
+          id={style.message}
           name="message"
           value={formData.message}
           onChange={handleChange}
-          className="mt-5"
+          className={globalStyle.mt5}
           required
         />
         {sending ?
-        <div id="sending">
+        <div id={style.sending}>
           <CircularProgress color="success"/>
         </div>:
         <button
         type="submit"
-        id="submit"
-        className="mt-5"
+        id={style.submit}
+        className={globalStyle.mt5}
         disabled={disableButton}
         >Submit</button>
         }
         {success ?
-        <div className="messageResponse">
+        <div className={style.messageResponse}>
           <CheckCircleOutlineIcon />
           Message Sent Succesfully!
         </div>
         :
         null}
         {error ?
-        <div className="messageResponse">
+        <div className={style.messageResponse}>
           <ErrorOutlineIcon />
           Error Sending Message
         </div>

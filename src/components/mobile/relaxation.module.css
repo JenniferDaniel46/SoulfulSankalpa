@@ -1,0 +1,37 @@
+
+#relaxation {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: calc(100vw / .75) auto;
+}
+
+#relaxation img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#relaxationText {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  color: var(--white);
+  text-align: center;
+  font-weight: 500;
+  font-size: 3vh;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.308);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+#relaxationSvg {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background-color: var(--green);
+  height: calc(100vh - calc(100vw / .75) - var(--header-Size));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

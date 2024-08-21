@@ -1,0 +1,32 @@
+#discoverPurpose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  font-size: 2.4vh;
+  font-weight: 700;
+  padding-top: 15px;
+}
+#discoverPurpose h2 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+#discoverContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.discoverColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  justify-content: space-around;
+  width: 25vw;
+  gap: 10px;
+  line-height: 2.6vh;
+}

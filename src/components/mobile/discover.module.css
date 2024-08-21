@@ -1,0 +1,34 @@
+#discoverPurpose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#discoverPurpose h2 {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+#discoverContent {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  justify-items: center;
+  font-size: 2vh;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.discoverText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 4vh;
+}
+
+.discoverTitle {
+  font-size: 2.5vh;
+  font-weight: 550;
+}

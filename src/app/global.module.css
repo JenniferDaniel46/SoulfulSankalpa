@@ -1,0 +1,35 @@
+.screen {
+  width: 100vw;
+  height: calc(100vh - var(--header-Size));
+  overflow: hidden;
+  scroll-snap-align: start;
+  margin-top: var(--header-Size);
+}
+
+.bgGreen {
+  background-color: var(--green);
+}
+
+.minHeight {
+  height: min-content;
+}
+
+.dimBackground {
+  background-color: rgba(0, 0, 0, 0.356);
+
+}
+.mt5 {
+  margin-top: 5px;
+}
+
+.h100 {
+  height: calc(100vh - var(--header-Size));
+}
+
+.w100 {
+  width: 100vw;
+  ;
+}
+.underline {
+  text-decoration: underline;
+}

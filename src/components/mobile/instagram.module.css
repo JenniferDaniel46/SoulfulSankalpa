@@ -1,0 +1,24 @@
+#connect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 550;
+
+  gap: 40px;
+}
+
+#instaSVG {
+  height: calc(100vh - 80vw - var(--header-Size) - 180px);
+  background-color: var(--green);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-self: flex-end;
+}
+
+#connect h2 {
+  font-size: 7vw;
+  font-weight: 800;
+
+}
