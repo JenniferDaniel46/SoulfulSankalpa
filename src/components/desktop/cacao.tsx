@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import globalStyle from '../../app/global.module.css';
 import style from './cacao.module.css';
 import Image from 'next/image';
-import { ScreenContext } from '@/app/layout';
+import { ScreenContext } from '@/app/context';
 
 export default function CacaoDesk () {
   const screen = useContext(ScreenContext);

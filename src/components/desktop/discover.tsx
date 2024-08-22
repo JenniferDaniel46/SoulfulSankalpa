@@ -3,7 +3,7 @@ import globalStyle from "../../app/global.module.css";
 import style from "./discover.module.css";
 import YogaLotusSvg from "../yogaLotusSvg";
 import { useContext } from "react";
-import { ScreenContext } from "@/app/layout";
+import { ScreenContext } from "@/app/context";
 
 export default function DiscoverDesk() {
   const screen = useContext(ScreenContext);

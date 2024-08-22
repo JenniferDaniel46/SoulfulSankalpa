@@ -4,7 +4,7 @@ import { InstagramEmbed } from "react-social-media-embed"
 import globalStyle from "../../app/global.module.css";
 import style from "./essenceInsta.module.css";
 import { useContext } from "react";
-import { ScreenContext } from "@/app/layout";
+import { ScreenContext } from "@/app/context";
 
 
 export default function EssenceInsta (){

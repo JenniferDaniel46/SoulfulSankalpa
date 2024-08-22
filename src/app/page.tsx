@@ -1,5 +1,4 @@
 'use client'
-import Image from "next/image";
 import { useContext } from "react";
 import SoulfulDef from "@/components/mobile/soulfulDef";
 import SoulfulExperience from "@/components/desktop/soulfulExperience";
@@ -14,38 +13,16 @@ import Connect from "@/components/mobile/connect";
 import Events from "@/components/mobile/events";
 import EssenceInsta from "@/components/desktop/essenceInsta";
 import MessageEvents from "@/components/desktop/messageEvents";
-import { ScreenContext } from "./layout";
+import { ScreenContext } from "./context";
+import LanidngMobile from "@/components/mobile/landing";
+import LandingDesk from "@/components/desktop/landing";
 
 export default function Home() {
   const screen = useContext(ScreenContext);
   const headerSize = 50;
   return (
     <>
-    <div id={screen.isMobile ? "landing" : "landingDesk"} className="screen landing">
-        <Image
-        alt="Jenn Daniel meditating"
-        src={'/Jenn-outdoors.jpeg'}
-        height={0}
-        width={0}
-        priority={true}
-        loading="eager"
-        sizes="{max-height: 1000px, max-width: 1000px, min-height: calc(100vh - 400px)}"
-        style={screen.isMobile ?
-          {height: screen.vh-400, width: 'auto'} :
-          {height: screen.vh*1.5, width: 'auto'}}
-        />
-    <div id="title">
-      <h1>
-        Soulful Sankalpa
-      </h1>
-      <h2>
-        Jenn Daniel
-      </h2>
-    </div>
-    <div id="landing-text">
-    Connect with your true goals through Soulful Sankalpa&apos;s unique approach. Utilize yoga, sound therapy, and personalized guidance to align with your deepest desires. Embrace a fulfilling life in harmony with your beliefs. Start your transformative journey today.
-    </div>
-    </div>
+    {screen.isMobile ? <LanidngMobile /> : <LandingDesk />}
     {screen.isMobile ? <SoulfulDef/> : <SoulfulExperience/>}
     {screen.isMobile ? <Relaxation headerSize={headerSize}/> : null}
     {screen.isMobile ? <CacaoMobile/> : <CacaoDesk/>}

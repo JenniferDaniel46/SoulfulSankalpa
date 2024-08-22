@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import globalStyle from "../../app/global.module.css";
 import style from "./events.module.css";
-import { ScreenContext } from "@/app/layout";
+import { ScreenContext } from "@/app/context";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';

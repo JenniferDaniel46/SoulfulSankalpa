@@ -3,7 +3,7 @@ import AbstractLotus from "@/components/abstractLotus";
 import globalStyle from "../../app/global.module.css";
 import style from "./instagram.module.css";
 import { useContext } from "react";
-import { ScreenContext } from "@/app/layout";
+import { ScreenContext } from "@/app/context";
 
 export default function Instagram() {
   const screen = useContext(ScreenContext);

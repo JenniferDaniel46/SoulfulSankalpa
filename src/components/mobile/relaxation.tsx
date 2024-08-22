@@ -3,7 +3,7 @@ import YogaLotusSvg from "../yogaLotusSvg"
 import globalStyle from '../../app/global.module.css';
 import style from "./relaxation.module.css";
 import { useContext } from "react";
-import { ScreenContext } from "@/app/layout";
+import { ScreenContext } from "@/app/context";
 
 export default function Relaxation (props:{headerSize:number}) {
   const screen = useContext(ScreenContext);
