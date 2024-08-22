@@ -4,7 +4,7 @@ import { CircularProgress } from "@mui/material";
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import globalStyle from "../app/global.module.css";
-import style from "./contactForm.module.css";
+// import style from "./contactForm.module.css";
 
 interface FormData {
   firstName: string;
@@ -13,7 +13,8 @@ interface FormData {
   message: string;
 }
 
-export default function ContactForm() {
+export default function ContactForm(props: {style:{ readonly [key: string]: string; }}) {
+  const {style} = props
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -50,7 +51,6 @@ export default function ContactForm() {
 
     }).then(res => {
     setSending(false);
-    console.log(res);
     setDisableButton(false);
     setSuccess(true);
 

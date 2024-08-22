@@ -1,10 +1,13 @@
+import { useContext } from 'react';
 import globalStyle from '../../app/global.module.css';
 import style from './cacao.module.css';
 import Image from 'next/image';
+import { ScreenContext } from '@/app/layout';
 
-export default function CacaoDesk (props: {vh:number, vw:number}) {
+export default function CacaoDesk () {
+  const screen = useContext(ScreenContext);
   return (
-    <div className={globalStyle.screen} id={style.cacao}>
+    <div className={`cacaoNav ${globalStyle.screen}`} id={style.cacao}>
       <h2 >
         Cacao & I
       </h2>
@@ -17,7 +20,7 @@ export default function CacaoDesk (props: {vh:number, vw:number}) {
         width={0}
         loading="lazy"
         sizes="{max-width: 10000px}"
-        style={{height: props.vh-250, width: 'auto'}}
+        style={{height: screen.vh-250, width: 'auto'}}
         />
       <div id={style.cacaoText}>
 

@@ -2,9 +2,12 @@ import Image from "next/image"
 import globalStyle from "../../app/global.module.css";
 import style from "./discover.module.css";
 import YogaLotusSvg from "../yogaLotusSvg";
+import { useContext } from "react";
+import { ScreenContext } from "@/app/layout";
 
-export default function DiscoverDesk(props:{vh: number, vw: number}) {
-  const imgSize = props.vh / 3.5
+export default function DiscoverDesk() {
+  const screen = useContext(ScreenContext);
+  const imgSize = screen.vh / 3.5
   return (
     <div className={globalStyle.screen} id={style.discoverPurpose}>
         <h2>Discover Your True Purpose</h2>

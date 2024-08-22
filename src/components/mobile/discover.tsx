@@ -1,8 +1,11 @@
 import Image from "next/image"
 import globalStyle from "../../app/global.module.css";
 import style from "./discover.module.css";
+import { useContext } from "react";
+import { ScreenContext } from "@/app/layout";
 
-export default function Discover (props: {vh:number, vw:number}) {
+export default function Discover () {
+  const screen = useContext(ScreenContext);
   return (
     <div className={globalStyle.screen} id={style.discoverPurpose}>
         <h2>Discover Your True Purpose</h2>
@@ -10,8 +13,8 @@ export default function Discover (props: {vh:number, vw:number}) {
           <Image
             src={'/Jenn-bowls-cropped.jpg'}
             alt="Jenn with sound bowls"
-            width={props.vh / 6}
-            height={props.vh / 6}
+            width={screen.vh / 6}
+            height={screen.vh / 6}
           />
           <div className={style.discoverText}>
             <span className={style.discoverTitle}>
@@ -32,14 +35,14 @@ export default function Discover (props: {vh:number, vw:number}) {
           <Image
             src={'/Jenn-above.jpg'}
             alt="Jenn with cacao"
-            height={props.vh / 6}
-            width={props.vh / 6}
+            height={screen.vh / 6}
+            width={screen.vh / 6}
           />
           <Image
             src={'/Jenn-bending-cropped.JPEG'}
             alt="Jenn bending in yoga pose"
-            height={props.vh / 6}
-            width={props.vh / 6}
+            height={screen.vh / 6}
+            width={screen.vh / 6}
           />
           <div className={style.discoverText}>
             <span className={style.discoverTitle}>

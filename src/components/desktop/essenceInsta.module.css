@@ -1,0 +1,33 @@
+#essenceInsta {
+  display: grid;
+  grid-template-columns: 30vw 20vw 50vw;
+  grid-template-rows: calc(100vh - var(--header-Size));
+}
+#essenceInsta h2 {
+  font-size: 35px;
+  font-weight: 700;
+}
+#essence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  font-size: 1.3vw;
+  justify-content: space-around;
+}
+#svg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#insta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+}
+#insta h2 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

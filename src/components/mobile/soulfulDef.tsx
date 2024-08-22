@@ -1,9 +1,11 @@
 import Image from "next/image"
 import globalStyle from '../../app/global.module.css';
 import style from "./soulfulDef.module.css";
+import { useContext } from "react";
+import { ScreenContext } from "@/app/layout";
 
-export default function SoulfulDef(props: {vw: number, vh: number}) {
-
+export default function SoulfulDef() {
+  const screen = useContext(ScreenContext);
   return(
     <div id={style.soulfulDefPage} className={globalStyle.screen}>
     <div id={style.soulfulDef}>
@@ -22,7 +24,7 @@ export default function SoulfulDef(props: {vw: number, vh: number}) {
       width={0}
       loading="lazy"
       sizes="{max-width: 1000px}"
-      style={{height: "auto", width: props.vw + 60}}
+      style={{height: "auto", width: screen.vw + 60}}
       />
     </div>
   )

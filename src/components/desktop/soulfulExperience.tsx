@@ -2,10 +2,12 @@ import TripleLotus from "../tripleLotus";
 import Image from "next/image";
 import globalStyle from '../../app/global.module.css';
 import style from "./soulfulExperience.module.css";
+import { useContext } from "react";
+import { ScreenContext } from "@/app/layout";
 
-export default function SoulfulExperience(props: { vh: number, vw: number }) {
+export default function SoulfulExperience() {
+  const screen = useContext(ScreenContext);
   return (
-
     <div id={style.soulfulExp} className={globalStyle.screen}>
       <div id={style.soulfulDefDesk} className={globalStyle.h100}>
         <h2>Soulful Sankalpa</h2>
@@ -20,11 +22,11 @@ export default function SoulfulExperience(props: { vh: number, vw: number }) {
           width={0}
           loading="lazy"
           sizes="{max-width: 40vw}"
-          style={{ height: "auto", width: props.vw * .35 }}
+          style={{ height: "auto", width: screen.vw * .35 }}
         />
       </div>
       <div id={style.soulfulSVG} className={`${globalStyle.h100} ${globalStyle.bgGreen}`}>
-        <TripleLotus fill="white" height={props.vh} width={props.vw * .4} />
+        <TripleLotus fill="white" height={screen.vh} width={screen.vw * .4} />
       </div>
       <div id={style.experience} className={globalStyle.h100}>
         <Image
@@ -34,7 +36,7 @@ export default function SoulfulExperience(props: { vh: number, vw: number }) {
           width={0}
           loading="lazy"
           sizes="{min-width: 40vw, min-height: 100vh}"
-          style={{ height: props.vh, width: props.vw * .4 }}
+          style={{ height: screen.vh, width: screen.vw * .4 }}
         />
         <div id={style.expTextGrid} className={`${globalStyle.h100} ${globalStyle.dimBackground}`}>
           <div id={style.expText} >
