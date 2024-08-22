@@ -41,9 +41,7 @@ export default function SoulfulExperience() {
         <div id={style.expTextGrid} className={`${globalStyle.h100} ${globalStyle.dimBackground}`}>
           <div id={style.expText} >
               Experience relaxation, stress relief, emotional balance with sound healing. Sound healing promotes inner peace. Creates harmony in the body, mind, and spirit through frequencies. Find healing, release, and inspiration for your well-being.
-
           </div>
-
         </div>
       </div>
     </div>

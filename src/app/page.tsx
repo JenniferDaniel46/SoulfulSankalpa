@@ -1,10 +1,6 @@
 'use client'
 import Image from "next/image";
-import { useEffect, useState, useContext } from "react";
-import YogaLotusSvg from "../components/yogaLotusSvg";
-import ContactForm from "../components/contactForm";
-import AquaticLotus from "@/components/aquaticLotus";
-import LotusSvg from "@/components/lotus";
+import { useContext } from "react";
 import SoulfulDef from "@/components/mobile/soulfulDef";
 import SoulfulExperience from "@/components/desktop/soulfulExperience";
 import Relaxation from "@/components/mobile/relaxation";
@@ -23,24 +19,6 @@ import { ScreenContext } from "./layout";
 export default function Home() {
   const screen = useContext(ScreenContext);
   const headerSize = 50;
-  // const [vw, setVw] = useState(700);
-  // const [vh, setVh] = useState(700);
-  // const [isMobile, setIsMobile] = useState(true);
-  // const getWindowSize = () => {
-  //   setVh(window.innerHeight);
-  //   setVw(window.innerWidth);
-  //   setIsMobile(window.innerWidth <= 768);
-  // }
-  // useEffect(() => {
-  //   getWindowSize();
-  // }, [])
-  // useEffect(() => {
-  //   window.addEventListener('resize', getWindowSize);
-  //   return () => {
-  //     window.removeEventListener('resize', getWindowSize);
-  //   }
-  // }, [vh, vw]);
-
   return (
     <>
     <div id={screen.isMobile ? "landing" : "landingDesk"} className="screen landing">

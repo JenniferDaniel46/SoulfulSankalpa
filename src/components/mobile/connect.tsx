@@ -5,10 +5,13 @@ import formStyle from "./contactForm.module.css";
 
 export default function Connect () {
   return (
-    <div className={`messageNav ${globalStyle.screen}`} id={style.sendMessage}>
-    <h3>Connect with Soulful Sankalpa</h3>
+    <div
+      className={`messageNav ${globalStyle.screen}`}
+      id={style.sendMessage}
+    >
+      <h3>Connect with Soulful Sankalpa</h3>
       <div>
-      Are you open to explore the transformative path together? Share a bit about yourself, and we will reach out with purpose. Eagerly awaiting your message!
+        Are you open to explore the transformative path together? Share a bit about yourself, and we will reach out with purpose. Eagerly awaiting your message!
       </div>
       <ContactForm style={formStyle}/>
       <div id={style.messageFooter}>
@@ -16,7 +19,9 @@ export default function Connect () {
           Jenn Daniel
         </span>
         <span>
-          Jennifer.Daniel46@yahoo.com
+          <a href="mailto: jennifer.daniel46@yahoo.com">
+            Jennifer.Daniel46@yahoo.com
+          </a>
         </span>
       </div>
     </div>

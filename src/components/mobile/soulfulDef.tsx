@@ -7,8 +7,11 @@ import { ScreenContext } from "@/app/layout";
 export default function SoulfulDef() {
   const screen = useContext(ScreenContext);
   return(
-    <div id={style.soulfulDefPage} className={globalStyle.screen}>
-    <div id={style.soulfulDef}>
+    <div
+      id={style.soulfulDefPage}
+      className={globalStyle.screen}
+    >
+      <div id={style.soulfulDef}>
         <div id={style.soulfulDefTitle}>
           Soulful Sankalpa
         </div>
@@ -18,13 +21,13 @@ export default function SoulfulDef() {
         </div>
       </div>
       <Image
-      alt="group yoga session"
-      src={'/image2.jpeg'}
-      height={0}
-      width={0}
-      loading="lazy"
-      sizes="{max-width: 1000px}"
-      style={{height: "auto", width: screen.vw + 60}}
+        alt="group yoga session"
+        src={'/image2.jpeg'}
+        height={0}
+        width={0}
+        loading="lazy"
+        sizes="{max-width: 1000px}"
+        style={{height: "auto", width: screen.vw + 60}}
       />
     </div>
   )

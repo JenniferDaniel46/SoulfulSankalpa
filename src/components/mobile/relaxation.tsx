@@ -9,21 +9,21 @@ export default function Relaxation (props:{headerSize:number}) {
   const screen = useContext(ScreenContext);
   return (
     <div className={globalStyle.screen} id={style.relaxation}>
-    <Image
-    alt="sound healing bowl"
-    src={'/bowl.jpeg'}
-    height={0}
-    width={0}
-    loading="lazy"
-    sizes="{min-width: 1000px}"
-    style={{height: "auto", width: screen.vw}}
-    />
-    <div id={style.relaxationText}>
-      Experience relaxation, stress relief, emotional balance with sound healing. Sound healing promotes inner peace. Creates harmony in the body, mind, and spirit through frequencies. Find healing, release, and inspiration for your well-being.
+      <Image
+        alt="sound healing bowl"
+        src={'/bowl.jpeg'}
+        height={0}
+        width={0}
+        loading="lazy"
+        sizes="{min-width: 1000px}"
+        style={{height: "auto", width: screen.vw}}
+      />
+      <div id={style.relaxationText}>
+        Experience relaxation, stress relief, emotional balance with sound healing. Sound healing promotes inner peace. Creates harmony in the body, mind, and spirit through frequencies. Find healing, release, and inspiration for your well-being.
+      </div>
+      <div id={style.relaxationSvg}>
+        <YogaLotusSvg color="white" fill="white" height={screen.vh -(screen.vw/.75) - props.headerSize - 10} width={screen.vw - 10}/>
+      </div>
     </div>
-    <div id={style.relaxationSvg}>
-      <YogaLotusSvg color="white" fill="white" height={screen.vh -(screen.vw/.75) - props.headerSize - 10} width={screen.vw - 10}/>
-    </div>
-  </div>
   )
 }
