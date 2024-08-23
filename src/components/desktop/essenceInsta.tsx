@@ -34,7 +34,7 @@ export default function EssenceInsta (){
         </div>
         <div className={globalStyle.h100} id={style.insta}>
           <h2>Discover your soulful journey</h2>
-          <InstagramEmbed url="https://www.instagram.com/soulful_sankalpa/" width={screen.vw*.45} height={.97*screen.vh}/>
+          <InstagramEmbed url="https://www.instagram.com/soulful_sankalpa/" width={screen.vw*.45}/>
         </div>
     </div>
 

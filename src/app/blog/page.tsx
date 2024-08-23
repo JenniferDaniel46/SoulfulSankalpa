@@ -3,6 +3,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import BlogPost from "./blogPost";
 import style from './pageDesk.module.css';
+import { CircularProgress } from "@mui/material";
 export type BlogType = {
   kind: string,
   id: string,
@@ -27,6 +28,9 @@ export type BlogType = {
   },
   etag: string,
 };
+const skeletonBlog = {
+
+}
 
 export default function Blog () {
   const [blogPosts, setBlogPosts] = useState([])
@@ -42,7 +46,13 @@ export default function Blog () {
       <h1>
         My Blogs
       </h1>
-      {blogPosts.map((blog, i) => <BlogPost key={`blog${i}`} blog={blog} />)}
+      {blogPosts.length ?
+      blogPosts.map((blog, i) => <BlogPost
+      key={`blog${i}`} blog={blog}
+      />)
+        :
+        <CircularProgress color="success" />
+    }
     </div>
   )
 }
