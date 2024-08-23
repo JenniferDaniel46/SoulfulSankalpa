@@ -1,9 +1,9 @@
-#essenceInsta {
+.essenceInsta {
   display: grid;
   grid-template-columns: 30vw 20vw 50vw;
   grid-template-rows: calc(100vh - var(--header-Size));
 }
-#essenceInsta h2 {
+.essenceInsta h2 {
   font-size: 35px;
   font-weight: 700;
 }

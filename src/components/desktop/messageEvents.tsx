@@ -14,7 +14,7 @@ import EmailIcon from '@mui/icons-material/Email';
 export default function MessageEvents () {
   const screen = useContext(ScreenContext);
   return (
-    <div  className={`calendarNav messageNav ${globalStyle.screen}`} id={style.messageEvents}>
+    <div  className={`${style.messageEvents} ${globalStyle.screen}`} id="messageEvents">
       <div className={globalStyle.h100} id={style.sendMessage}>
         <h3>Connect with Soulful Sankalpa</h3>
         <div>

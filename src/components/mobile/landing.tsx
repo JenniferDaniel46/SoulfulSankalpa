@@ -8,8 +8,8 @@ export default function LanidngMobile () {
   const screen = useContext(ScreenContext);
   return (
     <div
-      id={style.landing}
-      className={`landing ${globalStyle.screen}`}
+      id="landing"
+      className={`landing ${style.landing} ${globalStyle.screen}`}
     >
       <Image
         alt="Jenn Daniel meditating"

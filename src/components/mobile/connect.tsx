@@ -6,8 +6,8 @@ import formStyle from "./contactForm.module.css";
 export default function Connect () {
   return (
     <div
-      className={`messageNav ${globalStyle.screen}`}
-      id={style.sendMessage}
+      className={`messageNav ${style.sendMessage} ${globalStyle.screen}`}
+      id="sendMessage"
     >
       <h3>Connect with Soulful Sankalpa</h3>
       <div>

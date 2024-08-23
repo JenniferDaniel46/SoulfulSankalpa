@@ -10,7 +10,7 @@ import { ScreenContext } from "@/app/context";
 export default function EssenceInsta (){
   const screen = useContext(ScreenContext);
   return (
-    <div className={`instaNav ${globalStyle.screen}`} id={style.essenceInsta}>
+    <div className={`instaNav ${style.essenceInsta} ${globalStyle.screen}`} id="essenceInsta">
       <div id={style.essence}>
         <h2>Unveiling the essence within</h2>
         <span>

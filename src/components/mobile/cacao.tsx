@@ -8,8 +8,8 @@ export default function CacaoMobile () {
   const screen = useContext(ScreenContext);
   return (
     <div
-      className={`cacaoNav ${globalStyle.screen}`}
-      id={style.cacao}
+      className={`cacaoNav ${style.cacao} ${globalStyle.screen}`}
+      id="cacao"
     >
       <div id={style.cacaoText}>
         <span>

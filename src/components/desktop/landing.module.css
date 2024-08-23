@@ -1,5 +1,5 @@
 
-#landing {
+.landing {
   display: grid;
   grid-template-columns: 60vw 40vw;
   grid-template-rows: 200px 25vh calc(75vh - 200px - var(--header-Size));
@@ -8,7 +8,7 @@
   justify-content: center;
 }
 
-#landing img {
+.landing img {
   display: flex;
   max-width: none;
   max-height: none;
@@ -19,12 +19,12 @@
   height: calc(100vh - 400px);
 }
 
-#landing #title {
+.landing #title {
   grid-column: 1 / 3;
   grid-row: 1 / 2;
 }
 
-#landing #title h1 {
+.landing #title h1 {
   font-size: 55px;
 }
 

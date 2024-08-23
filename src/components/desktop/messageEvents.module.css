@@ -1,4 +1,4 @@
-#messageEvents {
+.messageEvents {
   display: grid;
   grid-template-columns: 40vw 20vw 40vw;
   grid-row: calc(100vh - var(--header-Size));

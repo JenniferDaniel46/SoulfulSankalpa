@@ -8,7 +8,10 @@ import { ScreenContext } from "@/app/context";
 export default function Instagram() {
   const screen = useContext(ScreenContext);
   return (
-    <div className={`instaNav ${globalStyle.screen}`} id={style.connect}>
+    <div
+      className={`instaNav ${style.connect} ${globalStyle.screen}`}
+      id="insta"
+    >
       <h2>Discover your soulful journey</h2>
       <InstagramEmbed url="https://www.instagram.com/soulful_sankalpa/" width={screen.vw*.9} height={.9*screen.vh}/>
       {screen.vh > 700 ?

@@ -7,7 +7,7 @@ import { ScreenContext } from '@/app/context';
 export default function CacaoDesk () {
   const screen = useContext(ScreenContext);
   return (
-    <div className={`cacaoNav ${globalStyle.screen}`} id={style.cacao}>
+    <div className={`cacaoNav ${style.cacao} ${globalStyle.screen}`} id="cacao">
       <h2 >
         Cacao & I
       </h2>
@@ -19,7 +19,7 @@ export default function CacaoDesk () {
           width={0}
           loading="lazy"
           sizes="{max-width: 10000px}"
-          style={{height: screen.vh-250, width: 'auto'}}
+          style={{height: "auto", width: screen.vw*.6}}
         />
         <div id={style.cacaoText}>
         <div>

@@ -1,4 +1,4 @@
-#connect {
+.connect {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +17,7 @@
   justify-self: flex-end;
 }
 
-#connect h2 {
+.connect h2 {
   font-size: 7vw;
   font-weight: 800;
 
