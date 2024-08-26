@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <title>Soulful Sankalpa</title>
-      <meta name="keywords" content="yoga soulful sankalpa cacao sound healing relaxation purpose bath essence Jenn Daniel"/>
+      <meta name="keywords" content="yoga, soulful sankalpa, soulful, cacao, sound healing, relaxation, purpose, sound bath, Jenn Daniel, yoga instructor, yoga in phoenix, yoga nidra, cacao ceremony, restorative yoga, vinyasa"/>
       <meta name="description" content="Jenn Daniel Website"/>
       <meta name="viewport" content="width=device-width inital-scale=1 maximum-scale=1 userScalable=0"/>
       <link rel="icon" href="/favicon.ico" sizes="any" />

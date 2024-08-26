@@ -25,7 +25,7 @@ export default function CacaoMobile () {
       </div>
       <Image
         src={"/cacao/pouring.jpeg"}
-        alt="cacao"
+        alt="cacao pouring in cacao ceremony"
         height={0}
         width={0}
         loading="lazy"

@@ -15,7 +15,7 @@ export default function Discover () {
       <div id={style.discoverContent}>
         <Image
           src={'/Jenn-bowls-cropped.jpg'}
-          alt="Jenn with sound bowls"
+          alt="Jenn playing Chakra bowl set of frosted crystal bowls"
           width={screen.vh / 6}
           height={screen.vh / 6}
         />
@@ -37,13 +37,13 @@ export default function Discover () {
         </div>
         <Image
           src={'/Jenn-above.jpg'}
-          alt="Jenn with cacao"
+          alt="Jenn sitting with mug of cacao"
           height={screen.vh / 6}
           width={screen.vh / 6}
         />
         <Image
           src={'/Jenn-bending-cropped.JPEG'}
-          alt="Jenn bending in yoga pose"
+          alt="Jenn in Camatkarasana or Wild Thing Pos"
           height={screen.vh / 6}
           width={screen.vh / 6}
         />

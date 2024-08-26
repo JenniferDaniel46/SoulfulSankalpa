@@ -16,7 +16,7 @@ export default function SoulfulExperience() {
           Sankalpa is a Sanskrit term that translates to &quot;intention&quot; or &quot;resolve.&quot; It is a deep understanding of one&apos;s true purpose or heartfelt desire. In the practice of yoga, discovering your Sankalpa is a powerful tool for aligning your thoughts, words, and actions with your highest self. By connecting to your Sankalpa, you can set a clear intention and manifest positive change in your life.
         </div>
         <Image
-          alt="group yoga session"
+          alt="Jenn and class in Balasana or Childs Pose"
           src={'/image2.jpeg'}
           height={0}
           width={0}
@@ -30,7 +30,7 @@ export default function SoulfulExperience() {
       </div>
       <div id={style.experience} className={globalStyle.h100}>
         <Image
-          alt="sound healing bowl"
+          alt="Jenn playing frosted crystal Chakra bowl"
           src={'/bowl.jpeg'}
           height={0}
           width={0}

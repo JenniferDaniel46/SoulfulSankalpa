@@ -28,10 +28,6 @@ export type BlogType = {
   },
   etag: string,
 };
-const skeletonBlog = {
-
-}
-
 export default function Blog () {
   const [blogPosts, setBlogPosts] = useState([])
   useEffect(() => {

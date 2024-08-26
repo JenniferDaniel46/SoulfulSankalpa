@@ -21,7 +21,7 @@ export default function SoulfulDef() {
         </div>
       </div>
       <Image
-        alt="group yoga session"
+        alt="Jenn and class in Balasana or Childs Pose"
         src={'/image2.jpeg'}
         height={0}
         width={0}

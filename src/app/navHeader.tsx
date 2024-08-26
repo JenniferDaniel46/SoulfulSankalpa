@@ -15,7 +15,6 @@ export default function NavHeader({
   }
   return (
     <>
-
     <div id="header">
     <span>
     </span>

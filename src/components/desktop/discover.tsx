@@ -22,7 +22,7 @@ export default function DiscoverDesk() {
           </span>
           <Image
             src={'/Jenn-bowls-cropped.jpg'}
-            alt="Jenn with sound bowls"
+            alt="Jenn playing Chakra bowl set of frosted crystal bowls"
             width={imgSize}
             height={imgSize}
           />
@@ -37,7 +37,7 @@ export default function DiscoverDesk() {
           </span>
         <Image
           src={'/Jenn-above.jpg'}
-          alt="Jenn with cacao"
+          alt="Jenn sitting with mug of cacao"
           height={imgSize}
           width={imgSize}
         />
@@ -52,7 +52,7 @@ export default function DiscoverDesk() {
           </span>
           <Image
             src={'/Jenn-bending-cropped.JPEG'}
-            alt="Jenn bending in yoga pose"
+            alt="Jenn in Camatkarasana or Wild Thing Pose"
             height={imgSize}
             width={imgSize}
           />

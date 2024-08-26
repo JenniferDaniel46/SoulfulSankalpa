@@ -18,7 +18,7 @@ export default function EssenceInsta (){
         </span>
         <Image
           src={'/bowls-cropped.JPEG'}
-          alt="sound bath bowls"
+          alt="Chakra bowl set of frosted crystal bowls set up to play"
           height={0}
           width={0}
           sizes="{max-width: 1000px}"

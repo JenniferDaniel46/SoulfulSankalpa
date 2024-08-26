@@ -18,7 +18,7 @@ export default function LandingDesk () {
         width={0}
         priority={true}
         loading="eager"
-        sizes="{max-height: 1000px, max-width: 1000px, min-height: calc(100vh - 400px)}"
+        sizes="{max-height: none, max-width: none, min-height: calc(100vh - 400px)}"
         style={{height: screen.vh*1.5, width: 'auto'}}
       />
       <div id={style.title}>

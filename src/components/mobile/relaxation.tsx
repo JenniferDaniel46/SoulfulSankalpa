@@ -10,7 +10,7 @@ export default function Relaxation (props:{headerSize:number}) {
   return (
     <div className={globalStyle.screen} id={style.relaxation}>
       <Image
-        alt="sound healing bowl"
+        alt="Jenn playing frosted crystal Chakra bowl"
         src={'/bowl.jpeg'}
         height={0}
         width={0}
