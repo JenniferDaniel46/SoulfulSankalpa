@@ -8,39 +8,45 @@ import style from './offerings.module.css';
 
 export default function MobileOfferings() {
   const [chronSort, setChronSort] = useState(false);
-  const [dayJSX, setDayJSX] = useState(<div>
-    <h2>Sundays</h2>
-    <OfferingItem
-      chronSort={chronSort}
-      offer={{
-        ...yogaPura,
-        ...yogaPura.classes[2],
-        ...yogaPura.schedule[2]
-      }}
-    />
-  </div>);
-  const [locJSX, setLocJSX] = useState(<div>
-    <h2>Esporta</h2>
-    <OfferingItem
-      chronSort={chronSort}
-      offer={{
-        ...esporta,
-        ...esporta.classes[0],
-        ...esporta.schedule[0]
-      }}
-    />
-    <OfferingItem
-      chronSort={chronSort}
-      offer={{
-        ...esporta,
-        ...esporta.classes[0],
-        ...esporta.schedule[1]
-      }}
-    />
-  </div>);
+  const defaultDayJSX = (
+    <div>
+      <h2>Sundays</h2>
+      <OfferingItem
+        chronSort={true}
+        offer={{
+          ...yogaPura,
+          ...yogaPura.classes[2],
+          ...yogaPura.schedule[2]
+        }}
+      />
+    </div>
+  )
+  const defaultLocJSX = (
+    <div>
+      <h2>Esporta</h2>
+      <OfferingItem
+        chronSort={chronSort}
+        offer={{
+          ...esporta,
+          ...esporta.classes[0],
+          ...esporta.schedule[0]
+        }}
+      />
+      <OfferingItem
+        chronSort={chronSort}
+        offer={{
+          ...esporta,
+          ...esporta.classes[0],
+          ...esporta.schedule[1]
+        }}
+      />
+    </div>
+  )
+  const [dayJSX, setDayJSX] = useState(defaultDayJSX);
+  const [locJSX, setLocJSX] = useState(defaultLocJSX);
   const handleDayChange = (e: React.MouseEvent<HTMLElement>, value: string) => {
     if (value === "sunday") {
-      setDayJSX(<div>
+      setDayJSX(<div className={style.offerCol}>
         <h2>Sundays</h2>
         <OfferingItem
           chronSort={chronSort}
@@ -52,7 +58,7 @@ export default function MobileOfferings() {
         />
       </div>)
     } else if (value === "monday") {
-      setDayJSX(<div>
+      setDayJSX(<div className={style.offerCol}>
         <h2>Mondays</h2>
         <OfferingItem
           chronSort={chronSort}
@@ -64,7 +70,7 @@ export default function MobileOfferings() {
         />
       </div>)
     } else if (value === "tuesday") {
-      setDayJSX(<div>
+      setDayJSX(<div className={style.offerCol}>
         <h2>Tuesdays</h2>
         <OfferingItem
           chronSort={chronSort}
@@ -76,7 +82,7 @@ export default function MobileOfferings() {
         />
       </div>)
     } else if (value === "wednesday") {
-      setDayJSX(<div>
+      setDayJSX(<div className={style.offerCol}>
         <h2>Wednesdays</h2>
         <OfferingItem
           chronSort={chronSort}
@@ -96,7 +102,7 @@ export default function MobileOfferings() {
         />
       </div>)
     } else if (value === "thursday") {
-      setDayJSX(<div>
+      setDayJSX(<div className={style.offerCol}>
         <h2>Thursdays</h2>
         <OfferingItem
           chronSort={chronSort}
@@ -108,7 +114,7 @@ export default function MobileOfferings() {
         />
       </div>)
     } else if (value === "friday") {
-      setDayJSX(<div>
+      setDayJSX(<div className={style.offerCol}>
         <h2>Fridays</h2>
         <OfferingItem
           chronSort={chronSort}
@@ -120,7 +126,7 @@ export default function MobileOfferings() {
         />
       </div>)
     } else if (value === "saturday") {
-      setDayJSX(<div>
+      setDayJSX(<div className={style.offerCol}>
         <h2>Saturdays</h2>
         <OfferingItem
           chronSort={chronSort}
@@ -135,7 +141,7 @@ export default function MobileOfferings() {
   }
   const handleLocChange = (e: React.MouseEvent<HTMLElement>, value: string) => {
     if (value === "esporta") {
-      setLocJSX(<div>
+      setLocJSX(<div className={style.offerCol}>
         <h2>Esporta</h2>
         <OfferingItem
           chronSort={chronSort}
@@ -155,8 +161,8 @@ export default function MobileOfferings() {
         />
       </div>)
     } else if (value === "healing") {
-      setLocJSX(<div>
-        <h2>Healing Space</h2>
+      setLocJSX(<div className={style.offerCol}>
+        <h2><a href={healingSpace.url}>Healing Space</a></h2>
         <OfferingItem
           chronSort={chronSort}
           offer={{
@@ -176,8 +182,8 @@ export default function MobileOfferings() {
       </div>)
     } else if (value === "kula") {
       setLocJSX(
-        <div>
-          <h2>Kula Yoga</h2>
+        <div className={style.offerCol}>
+          <h2><a href={kulaYoga.url}>Kula Yoga</a></h2>
           <OfferingItem
             chronSort={chronSort}
             offer={{
@@ -191,8 +197,8 @@ export default function MobileOfferings() {
 
     } else if (value === "pura") {
       setLocJSX(
-        <div>
-          <h2>Yoga Pura</h2>
+        <div className={style.offerCol}>
+          <h2><a href={yogaPura.url}>Yoga Pura</a></h2>
           <OfferingItem
             chronSort={chronSort}
             offer={{
@@ -221,9 +227,10 @@ export default function MobileOfferings() {
       )
     }
   }
+
   return (
-    <div className={`${globalStyle.screen}`}>
-      <div>
+    <div className={`${globalStyle.screen} ${style.offerings}`} id="offerings">
+      <div id={style.offeringsHeader}>
         <h2>
           Weekly Offerings
         </h2>
@@ -245,8 +252,8 @@ export default function MobileOfferings() {
         </div>
       </div>
       {chronSort ?
-        <div>
-          <ToggleButtonGroup exclusive onChange={handleDayChange}>
+        <div className={style.sortMenu}>
+          <ToggleButtonGroup exclusive className={style.buttonGroup} onChange={handleDayChange}>
             <ToggleButton value={"sunday"}>
               Sun
             </ToggleButton>
@@ -271,8 +278,8 @@ export default function MobileOfferings() {
           </ToggleButtonGroup>
           {dayJSX}
         </div> :
-        <div>
-          <ToggleButtonGroup exclusive onChange={handleLocChange}>
+        <div className={style.sortMenu}>
+          <ToggleButtonGroup className={style.buttonGroup} exclusive onChange={handleLocChange}>
             <ToggleButton value={"esporta"}>
               Esporta
             </ToggleButton>
@@ -287,8 +294,6 @@ export default function MobileOfferings() {
             </ToggleButton>
           </ToggleButtonGroup>
           {locJSX}
-
-
         </div>
       }
     </div>

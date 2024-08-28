@@ -36,6 +36,8 @@
   scroll-snap-type: y mandatory;
   position: relative;
   scroll-padding-top: 50px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--tan) var(--green);
 }
 
 .screen {

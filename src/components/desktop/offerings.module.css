@@ -1,0 +1,83 @@
+.offerings h2{
+font-size: 40px;
+font-weight: 700;
+}
+.offerings a {
+  text-decoration: underline;
+}
+#offeringsHeader {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 700;
+}
+#offeringsHeader button {
+  font-weight: 700;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+#offerList {
+  display: flex;
+  flex-direction: row;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  padding: 20px;
+  width: 100vw;
+  height: calc(100vh - var(--header-Size) - 100px );
+  scrollbar-width: thin;
+  scrollbar-color: var(--green) var(--tan);
+}
+#offerList h2{
+  font-size: 42px;
+  font-weight: 700;
+
+}
+.offerDay {
+  width: 450px;
+  border-left: 1px solid var(--green);
+  border-right: 1px solid var(--green);
+  padding: 10px;
+}
+.offerLoc {
+  width: 450px;
+  border-left: 1px solid var(--green);
+  border-right: 1px solid var(--green);
+  padding: 10px;
+  min-width: 450px;
+  overflow-y: scroll;
+
+}
+.offerItem {
+  display: grid;
+  grid-template-rows: auto;
+  width: 400px;
+  margin-bottom: 20px;
+}
+.offerItem h3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 28px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--green);
+
+}
+.offerItem h4 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 550;
+  width: 100%;
+}
+.description {
+  font-size: 18px;
+}

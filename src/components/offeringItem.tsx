@@ -3,6 +3,7 @@ import { useContext } from "react"
 import mobileStyle from "./mobile/offerings.module.css";
 import deskStyle from  "./desktop/offerings.module.css";
 
+
 export default function OfferingItem (props: {offer: {
   title: string,
   address: string,
@@ -15,28 +16,29 @@ export default function OfferingItem (props: {offer: {
 chronSort: boolean,
 }){
   const screen = useContext(ScreenContext);
+  let style;
   if (screen.isMobile) {
-    const style = mobileStyle;
+    style = mobileStyle;
   } else {
-    const style = deskStyle;
+    style = deskStyle;
   }
   return (
-    <div>
+    <div className={style.offerItem}>
       <h3>
-        {props.chronSort ? props.offer.title : <div>
+        {props.chronSort ? <a href={props.offer.url}>{props.offer.title}</a> : <div className={style.time}>
           <span>{props.offer.day}</span>
           <span>{props.offer.time}</span>
         </div>
         }
       </h3>
-        {props.chronSort ? <div>
+        {props.chronSort ? <div className={style.time}>
           <span>{props.offer.day}</span>
           <span>{props.offer.time}</span>
         </div> : null}
       <h4>
         {props.offer.name}
       </h4>
-      <div>
+      <div className={style.description}>
         {props.offer.description}
       </div>
     </div>
