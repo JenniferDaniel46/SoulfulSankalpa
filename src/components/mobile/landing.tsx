@@ -13,13 +13,13 @@ export default function LanidngMobile () {
     >
       <Image
         alt="Jenn Daniel meditating"
-        src={'/Jenn-outdoors.jpeg'}
+        src={'/Jenn-outdoors-square.jpeg'}
         height={0}
         width={0}
         priority={true}
         loading="eager"
         sizes="{max-height: 1000px, max-width: 1000px, min-height: calc(100vh - 400px)}"
-        style={{height: screen.vh-400, width: 'auto'}}
+        style={{height: 'auto', width: screen.vw}}
       />
       <div id={style.title}>
         <h1>
