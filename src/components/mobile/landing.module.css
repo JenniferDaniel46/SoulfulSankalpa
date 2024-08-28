@@ -43,9 +43,9 @@
   grid-row: 2 / 3;
   background-color: var(--green);
   color: var(--tan);
-  font-size: 3.2vh;
+  font-size: 3vh;
   height: 100%;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   display: flex;
   align-items: center;
