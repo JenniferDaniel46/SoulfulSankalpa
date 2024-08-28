@@ -16,6 +16,8 @@ import MessageEvents from "@/components/desktop/messageEvents";
 import { ScreenContext } from "./context";
 import LanidngMobile from "@/components/mobile/landing";
 import LandingDesk from "@/components/desktop/landing";
+import MobileOfferings from "@/components/mobile/offerings";
+import DeskOfferings from "@/components/desktop/offerings";
 
 export default function Home() {
   const screen = useContext(ScreenContext);
@@ -28,8 +30,9 @@ export default function Home() {
     {screen.isMobile ? <CacaoMobile/> : <CacaoDesk/>}
     {screen.isMobile ? <Discover/>:<DiscoverDesk/>}
     {screen.isMobile ? <Essence/> : <EssenceInsta/>}
-    {screen.isMobile ? <Instagram/> : <MessageEvents/>}
-    {screen.isMobile ? <Connect/> :null}
+    {screen.isMobile ? <Instagram/> : <DeskOfferings/>}
+    {screen.isMobile ? <Connect/> : <MessageEvents/>}
+    {screen.isMobile ? <MobileOfferings /> : null}
     {screen.isMobile ? <Events/>: null}
     </>
   );

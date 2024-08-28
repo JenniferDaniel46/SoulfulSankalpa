@@ -13,7 +13,7 @@ export default function LandingDesk () {
     >
       <Image
         alt="Jenn Daniel meditating"
-        src={'/Jenn-outdoors.jpeg'}
+        src={'/Jenn-outdoors-up.jpeg'}
         height={0}
         width={0}
         priority={true}
