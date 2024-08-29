@@ -33,13 +33,11 @@ export default function MessageEvents () {
         </div>
       </div>
       <div className={globalStyle.bgGreen} id={style.divider}>
-        {/* <AbstractLotus fill="white" width={screen.vw * .18} height={screen.vh * .5 - 50}/>
-        <LotusSvg fill="white" width={screen.vw * .18} height={screen.vh * .5 - 50}/> */}
         <TripleLotus fill="white" height={screen.vh} width={screen.vw * .4} />
       </div>
       <div id={style.events} className={globalStyle.h100}>
         Events
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FPhoenix&bgcolor=%23344734&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showDate=0&showNav=0&src=ZGFuaWVsbnByZWpzQGdtYWlsLmNvbQ&src=MGY5NDYzNzgyOTQwM2VhNWUyOThjMDM5N2Y5ZWY1Njc2OTZjNzFkNjYwZWVlYWVmOWRkNGQ1MDEzMGEwZjU3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y19qMW5laWdvNXNpa2wzMGtoMDRraDZtdW44c0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23AD1457&color=%23795548&color=%23009688&color=%23C0CA33" style={{borderWidth:0}} width={screen.vw *.35} height={screen.vh - 280}  scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%23ffffff&showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=ZTMyZTY5MGNmZDAyNGNlODcwYjVlNzI4YTJjNGVhYTJkN2MwMmM3Mjc2MDg2NDQ3YzgyYTZkMWU1NDg5MTBkYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%233F51B5" style={{borderWidth:0}} width={screen.vw *.35} height={screen.vh - 280}  scrolling="no"></iframe>
         <div id={style.credits}>
           <span>
             Website designed and created by Daniel Prejs

@@ -28,16 +28,13 @@ export const healingSpace = {
   url: "https://azhealingspace.com/schedule/",
   classes: [{
     name: "Yoga Nidra and Sound Bath",
-    description: `Yoga Nidra is translated as “Yogic Sleep” and is an       ancient meditation
-    practice. This meditation/relaxation technique uses a mix of somatic and
-    cognitive techniques to address a wide range of conditions. Sound healing also offers profound benefits to the body, mind and spirit. It
-    assists to balance both hemispheres of the brain, reduce stress and
-    anxiety, increase focus and mental clarity. These practices individually do wonders for the mind and body. Together they can create an amazing practice to help invite more peace, clarity and calm not only into your day but when practiced regularly, we can feel these benefits in the long term as well.
+    description: `Yoga Nidra is translated as “Yogic Sleep” and is an ancient meditation practice. This meditation/relaxation technique uses a mix of somatic and cognitive techniques to address a wide range of conditions. Sound healing also offers profound benefits to the body, mind and spirit.
+    It assists to balance both hemispheres of the brain, reduce stress and anxiety, increase focus and mental clarity. These practices individually do wonders for the mind and body. Together they can create an amazing practice to help invite more peace, clarity and calm not only into your day but when practiced regularly, we can feel these benefits in the long term as well.
     `,
   },
   {
     name: "Slow Flow",
-    description: "",
+    description: "Practice with intention in this slow flow class. We warm up the body and then move through the flow slowly like a moving meditation. Let the transitions from one pose to the next be fluid and intentional. Great practice for all levels of experience.",
   },
   ],
   schedule: [
@@ -80,15 +77,15 @@ export const yogaPura = {
       name: "Restorative and Yoga Nidra",
       description: `Restorative: This is a gentle, slow-paced class. In a restorative practice all poses are supported with props to allow the practitioner to release muscular effort and allow the body to be fully supported in the pose. This is a great practice for people with limited mobility, recovering from injury as well as a great addition to anyone’s regular practice.
 
-      Yoga Nidra is translated as “Yogic Sleep” and is an ancient meditation
-practice. This meditation/relaxation technique uses a mix of somatic and
-cognitive techniques to address a wide range of conditions. Sound healing also offers profound benefits to the body, mind and spirit. It
-assists to balance both hemispheres of the brain, reduce stress and
-anxiety, increase focus and mental clarity. These practices individually do wonders for the mind and body. Together they can create an amazing practice to help invite more peace, clarity and calm not only into your day but when practiced regularly, we can feel these benefits in the long term as well.`,
+      Yoga Nidra is translated as “Yogic Sleep” and is an ancient meditation practice. This meditation/relaxation technique uses a mix of somatic and cognitive techniques to address a wide range of conditions.
+      Sound healing also offers profound benefits to the body, mind and spirit. It assists to balance both hemispheres of the brain, reduce stress and anxiety, increase focus and mental clarity.
+      These practices individually do wonders for the mind and body. Together they can create an amazing practice to help invite more peace, clarity and calm not only into your day but when practiced regularly, we can feel these benefits in the long term as well.`,
     },
     {
       name: "Essential Basics",
-      description: "",
+      description: `Learn the foundation of your practice here. Focusing on the alignment, breath and posture of the pose as well as learning the philosophy of the practice.
+      You’ll also learn basic meditation and breath practices and how to translate what you learn on the mat out into the world. It’s important to remember “basic” doesn’t always mean easy.
+      You’ll encounter discomfort and begin to learn what it is to meet your edge in a pose and why its important to feel discomfort and how to ground yourself in those moments.`,
     },
     {
       name: "Vinyasa",

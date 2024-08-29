@@ -31,10 +31,10 @@ export type BlogType = {
 export default function Blog () {
   const [blogPosts, setBlogPosts] = useState([])
   useEffect(() => {
-    axios.get("https://www.googleapis.com/blogger/v3/blogs/1600030983566683611/posts?key=AIzaSyD2YYebfacVG1a7BirWkeGPPwtrNvHB_Ck").then((res) => {
-      setBlogPosts(res.data.items);
-      // console.log(res.data.items[0].content)
-    }).catch(e => console.log(e))
+    fetch("/blog/api")
+    .then(res => res.json())
+    .then(data => setBlogPosts(data))
+    .catch(e => console.log(e))
   } ,[])
 
   return (

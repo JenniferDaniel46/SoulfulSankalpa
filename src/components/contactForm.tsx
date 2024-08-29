@@ -4,7 +4,7 @@ import { CircularProgress } from "@mui/material";
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import globalStyle from "../app/global.module.css";
-// import style from "./contactForm.module.css";
+
 
 interface FormData {
   firstName: string;
@@ -39,9 +39,9 @@ export default function ContactForm(props: {style:{ readonly [key: string]: stri
     setError(false)
     setDisableButton(true)
     axios.post('https://api.emailjs.com/api/v1.0/email/send', {
-      service_id: "service_4c6zw4o",
-      template_id: "template_zkbm4gg",
-      user_id: "7TjQL62Z7uX_jNBz5",
+      service_id: "service_yfd4uny",
+      template_id: "template_8oj7v9a",
+      user_id: "bzgVegGAX9giOi6NB",
       template_params: {
         first_name: formData.firstName,
         last_name: formData.lastName,
@@ -60,7 +60,6 @@ export default function ContactForm(props: {style:{ readonly [key: string]: stri
     setDisableButton(false);
     setError(true);
   })
-    // Handle form submission logic here (e.g., send data to an API endpoint)
   };
 
   return (
