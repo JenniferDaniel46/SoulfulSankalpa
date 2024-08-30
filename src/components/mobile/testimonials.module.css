@@ -1,0 +1,33 @@
+.testimonialsPage {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 20px;
+}
+.testimonialsPage h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.testimonials{
+  display: flex;
+  flex-direction: row;
+  /* padding: 10px; */
+  /* align-items: center; */
+  gap: 20px;
+  overflow-x: scroll;
+  scrollbar-color: var(--green) var(--tan);
+  width: 100vw;
+  flex-wrap: nowrap;
+}
+.testimonial {
+  /* width: 200px; */
+  min-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  padding: 10px;
+  border-left: 1px solid var(--green);
+  overflow-y: scroll;
+  scrollbar-color: var(--green) var(--tan);
+}

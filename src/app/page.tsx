@@ -18,6 +18,8 @@ import LanidngMobile from "@/components/mobile/landing";
 import LandingDesk from "@/components/desktop/landing";
 import MobileOfferings from "@/components/mobile/offerings";
 import DeskOfferings from "@/components/desktop/offerings";
+import MobileTestimonials from "@/components/mobile/testimonials";
+import DeskTestimonials from "@/components/desktop/testimonials";
 
 export default function Home() {
   const screen = useContext(ScreenContext);
@@ -31,8 +33,10 @@ export default function Home() {
     {screen.isMobile ? <Discover/>:<DiscoverDesk/>}
     {screen.isMobile ? <Essence/> : <EssenceInsta/>}
     {screen.isMobile ? <Instagram/> : <DeskOfferings/>}
+    {screen.isMobile ? null : <DeskTestimonials />}
     {screen.isMobile ? <Connect/> : <MessageEvents/>}
     {screen.isMobile ? <MobileOfferings /> : null}
+    {screen.isMobile ? <MobileTestimonials /> : null}
     {screen.isMobile ? <Events/>: null}
     </>
   );
