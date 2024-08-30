@@ -47,6 +47,9 @@ export default function NavHeader({
       <Link href={"/#offerings"}>
         Weekly Offerings
       </Link>
+      <Link href={"/#testimonials"}>
+        Testimonials
+      </Link>
       <Link
       href={screen.isMobile ? "/#events" : "/#messageEvents"}
       scroll={true}>
