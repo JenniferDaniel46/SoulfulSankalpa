@@ -30,4 +30,5 @@
   border-left: 1px solid var(--green);
   overflow-y: scroll;
   scrollbar-color: var(--green) var(--tan);
+  white-space: pre-line;
 }

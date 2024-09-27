@@ -25,7 +25,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  white-space: pre-line;
 }
-#long {
+.long {
   width: 96vw;
 }
