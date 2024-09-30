@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { SwipeableDrawer } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
 import Link from "next/link";
 import { ScreenContext } from "./context";
 
@@ -22,7 +23,7 @@ export default function NavHeader({
     Soulful Sankalpa
     </Link>
     <span id="header-menu" onClick={() => toggleDrawer(true)}>
-      menu
+      <MenuIcon />
     </span>
   </div>
   <SwipeableDrawer
