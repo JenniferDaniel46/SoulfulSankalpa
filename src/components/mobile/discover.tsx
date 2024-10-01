@@ -24,7 +24,7 @@ export default function Discover () {
             Private and Group Sound Baths
           </span>
           <span>
-            Uncover the essence of your being through this transformative experience.
+            Sound healing and sound baths utilize specific frequencies and vibrations to promote relaxation, reduce stress, and enhance overall well-being. During a sound bath, participants are enveloped in sound from instruments. This auditory experience can help balance energy, improve mood, and facilitate deeper meditation. The healing properties stem from the way sound affects the body and mind: it can lower heart rate, decrease anxiety, and promote emotional release. The vibrations can also help clear blockages in energy flow, fostering a sense of harmony and connection. Overall, sound healing is seen as a gentle, non-invasive way to support physical, emotional, and spiritual healing.
           </span>
         </div>
         <div className={style.discoverText}>
