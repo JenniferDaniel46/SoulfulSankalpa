@@ -2,11 +2,9 @@ import { useState } from 'react';
 import globalStyle from '../../app/global.module.css';
 import { ToggleButton, ToggleButtonGroup } from '@mui/material';
 import OfferingItem from '../offeringItem';
-import { yogaPura, kulaYoga, healingSpace, esporta } from '../offeringObj';
 import style from './offerings.module.css';
 import { offerings } from '../offeringObj';
 import { Offer } from '../offeringObj';
-import { title } from 'process';
 
 
 export default function MobileOfferings() {
