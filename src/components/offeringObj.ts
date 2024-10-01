@@ -1,26 +1,34 @@
 //////// example offering template
-const example = {
+const example = [
+  //////// vvvvv copy below this line for new studio or location  vvvvv ////////////////
+  {
   title: "name of gym or location",
   address: "address of class",
   url: "https://www.website-of-location.com",
   classes: [
+    //////// vvvvv copy below this line for new class type vvvvv ///////////////
     {
       name: "name of class 1",
       description: `description of class 1`,
     },
+    /////// ^^^^^ copy above this line for new class type ^^^^^ ////////////////
     {
       name: "name of class 2",
       description: `description of class 2`
-    }
+    },
   ],
   schedule: [
+    /////// vvvvv copy below this line for new class time or schedule vvvvv /////////////////
     {
       day: "day of class ex Monday - day must be capitalized and singular",
       time: "10:00am",
       name: "name of class this must exactly match the name of the class entered in with the desription for the description to be tied to this class",
-    }
+    },
+    ////// ^^^^^ copy above this line for new class time or schedule ^^^^ //////////////
   ]
-}
+},
+//////// ^^^^^ copy above this line for new studio or location ^^^^^ //////////////////
+]
 
 ////////// vvv List of offerings vvv /////////////
 export const offerings = [
