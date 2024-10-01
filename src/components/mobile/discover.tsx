@@ -32,7 +32,7 @@ export default function Discover () {
             Private and Group Cacao Ceremonies. Learn how to create your own ritual.
           </span>
           <span>
-            Embark on a path of self-discovery with expert guidance.
+            Cacao ceremonies involve the ceremonial use of cacao, often in a raw, unprocessed form, to promote connection, healing, and community. Traditionally rooted in Mesoamerican cultures, these ceremonies typically include preparing cacao as a warm beverage and consuming it in a mindful, intentional setting.The benefits of cacao ceremonies include: emotional healing, heart opening, mindfulness, creativity and community building. Overall, cacao ceremonies offer a unique blend of physical, emotional, and spiritual benefits, fostering a deeper connection to oneself and the community.
           </span>
         </div>
         <Image
