@@ -48,7 +48,7 @@ export default function DiscoverDesk() {
           </span>
           <YogaLotusSvg fill="var(--green)" height={100} width={100}/>
           <span>
-            Align your mind, body, and spirit in harmony with the universe.
+            Yoga and meditation offer a wide range of benefits for both physical and mental well-being such as: improved flexibility, increased strength, better posture, stress relief, enhanced balance, and fosters a deeper awareness of the body and mind, promoting self-acceptance. Yoga Nidra Meditation can assist deep relaxation, improved sleep, mental clarity, emotional healing, body awareness, enhanced creativity, restoration and recovery. Overall, Yoga Nidra serves as a powerful tool for relaxation, self-discovery, and holistic healing. These practices create a holistic approach to health, enhancing physical fitness and mental clarity while promoting overall well-being.
           </span>
           <Image
             src={'/Jenn-bending-cropped.JPEG'}
