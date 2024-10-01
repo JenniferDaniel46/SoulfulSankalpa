@@ -22,6 +22,7 @@ const example = {
   ]
 }
 
+////////// vvv List of offerings vvv /////////////
 export const offerings = [
   {
     title: "Esporta Fitnesss",
