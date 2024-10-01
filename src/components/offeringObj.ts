@@ -32,6 +32,7 @@ const example = [
 
 ////////// vvv List of offerings vvv /////////////
 export const offerings = [
+
   {
     title: "Esporta Fitnesss",
     address: "3301 E Bell Rd Phoenix, AZ 85032",
