@@ -30,7 +30,7 @@ export default function LandingDesk () {
         </h2>
       </div>
       <div id={style.landingText}>
-        Connect with your true goals through Soulful Sankalpa&apos;s unique approach. Utilize yoga, sound therapy, and personalized guidance to align with your deepest desires. Embrace a fulfilling life in harmony with your beliefs. Start your transformative journey today.
+        Connect with your true goals through Soulful Sankalpa&apos;s unique approach. Join Jenn and learn to utilize yoga, sound therapy, and personalized guidance to align with your deepest desires. Embrace a fulfilling life in harmony with your beliefs. Start your transformative journey today.
       </div>
     </div>
   )
