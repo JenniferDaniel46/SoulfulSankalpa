@@ -52,7 +52,7 @@ export default function Discover () {
             Nourish your soul with movement and Yoga Nidra Meditation. Private and group rates available.
           </span>
           <span>
-            Yoga and meditation offer a wide range of benefits for both physical and mental well-being such as: improved flexibility, increased strength, better posture, stress relief, enhanced balance, and fosters a deeper awareness of the body and mind, promoting self-acceptance. Yoga Nidra Meditation can assist deep relaxation, improved sleep, mental clarity, emotional healing, body awareness, enhanced creativity, restoration and recovery. Overall, Yoga Nidra serves as a powerful tool for relaxation, self-discovery, and holistic healing. These practices create a holistic approach to health, enhancing physical fitness and mental clarity while promoting overall well-being.
+            Yoga offers a wide range of benefits for both physical and mental well-being such as: improved flexibility, increased strength, better posture, stress relief, enhanced balance, and fosters a deeper awareness of the body and mind, promoting self-acceptance. Yoga Nidra Meditation can assist deep relaxation, improved sleep, mental clarity, emotional healing, body awareness, enhanced creativity, restoration and recovery. Overall, Yoga Nidra serves as a powerful tool for relaxation, self-discovery, and holistic healing. These practices create a holistic approach to health, enhancing physical fitness and mental clarity while promoting overall well-being.
           </span>
         </div>
       </div>
