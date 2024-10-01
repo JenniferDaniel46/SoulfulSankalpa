@@ -1,3 +1,27 @@
+//////// example offering template
+const example = {
+  title: "name of gym or location",
+  address: "address of class",
+  url: "https://www.website-of-location.com",
+  classes: [
+    {
+      name: "name of class 1",
+      description: `description of class 1`,
+    },
+    {
+      name: "name of class 2",
+      description: `description of class 2`
+    }
+  ],
+  schedule: [
+    {
+      day: "day of class ex Monday - day must be capitalized and singular",
+      time: "10:00am",
+      name: "name of class this must exactly match the name of the class entered in with the desription for the description to be tied to this class",
+    }
+  ]
+}
+
 export const offerings = [
   {
     title: "Esporta Fitnesss",
