@@ -33,7 +33,7 @@ export default function DiscoverDesk() {
           </span>
             <YogaLotusSvg fill="var(--green)" height={200} width={200}/>
           <span>
-            Embark on a path of self-discovery with expert guidance.
+            Cacao ceremonies involve the ceremonial use of cacao, often in a raw, unprocessed form, to promote connection, healing, and community. Traditionally rooted in Mesoamerican cultures, these ceremonies typically include preparing cacao as a warm beverage and consuming it in a mindful, intentional setting.The benefits of cacao ceremonies include: emotional healing, heart opening, mindfulness, creativity and community building. Overall, cacao ceremonies offer a unique blend of physical, emotional, and spiritual benefits, fostering a deeper connection to oneself and the community.  
           </span>
         <Image
           src={'/Jenn-above.jpg'}
