@@ -31,7 +31,7 @@ export default function DiscoverDesk() {
           <span className={style.discoverTitle}>
             Private and Group Cacao Ceremonies. Learn how to create your own ritual.
           </span>
-            <YogaLotusSvg fill="var(--green)" height={200} width={200}/>
+            <YogaLotusSvg fill="var(--green)" height={100} width={100}/>
           <span>
             Cacao ceremonies involve the ceremonial use of cacao, often in a raw, unprocessed form, to promote connection, healing, and community. Traditionally rooted in Mesoamerican cultures, these ceremonies typically include preparing cacao as a warm beverage and consuming it in a mindful, intentional setting.The benefits of cacao ceremonies include: emotional healing, heart opening, mindfulness, creativity and community building. Overall, cacao ceremonies offer a unique blend of physical, emotional, and spiritual benefits, fostering a deeper connection to oneself and the community.  
           </span>
@@ -46,7 +46,7 @@ export default function DiscoverDesk() {
           <span className={style.discoverTitle}>
             Nourish your soul with movement and Yoga Nidra Meditation. Private and group rates available.
           </span>
-          <YogaLotusSvg fill="var(--green)" height={200} width={200}/>
+          <YogaLotusSvg fill="var(--green)" height={100} width={100}/>
           <span>
             Align your mind, body, and spirit in harmony with the universe.
           </span>
