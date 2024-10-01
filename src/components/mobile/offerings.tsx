@@ -4,42 +4,71 @@ import { ToggleButton, ToggleButtonGroup } from '@mui/material';
 import OfferingItem from '../offeringItem';
 import { yogaPura, kulaYoga, healingSpace, esporta } from '../offeringObj';
 import style from './offerings.module.css';
+import { offerings } from '../offeringObj';
+import { Offer } from '../offeringObj';
+import { title } from 'process';
 
 
 export default function MobileOfferings() {
   const [chronSort, setChronSort] = useState(false);
+  const weeklyOfferings: Offer[][] = [[], [], [], [], [], [], []];
+  const locOfferings: { [key: string]: Offer[] } = {};
+  offerings.forEach((location) => {
+    for (let i = 0; i < location.schedule.length; i++) {
+      const classSchedule = location.schedule[i];
+      const classDetails = location.classes.find((item) => item.name === classSchedule.name)
+      const offering = {
+        ...location,
+        ...classSchedule,
+        ...classDetails
+      }
+      if (offering.day === "Sunday") {
+        weeklyOfferings[0].push(offering)
+      } else if (offering.day === "Monday") {
+        weeklyOfferings[1].push(offering)
+      } else if (offering.day === "Tuesday") {
+        weeklyOfferings[2].push(offering)
+      } else if (offering.day === "Wednesday") {
+        weeklyOfferings[3].push(offering)
+      } else if (offering.day === "Thursday") {
+        weeklyOfferings[4].push(offering)
+      } else if (offering.day === "Friday") {
+        weeklyOfferings[5].push(offering)
+      } else if (offering.day === "Saturday") {
+        weeklyOfferings[6].push(offering)
+      }
+      if (offering.title in locOfferings) {
+        locOfferings[offering.title].push(offering)
+      } else {
+        locOfferings[offering.title] = [offering];
+      }
+    }
+  })
   const defaultDayJSX = (
     <div>
       <h2>Sundays</h2>
-      <OfferingItem
-        chronSort={true}
-        offer={{
-          ...yogaPura,
-          ...yogaPura.classes[2],
-          ...yogaPura.schedule[2]
-        }}
-      />
+      {weeklyOfferings[0].map((offer, i) => {
+        return (<OfferingItem
+          key={i}
+          chronSort={true}
+          offer={offer}
+        />)
+      })}
     </div>
   )
   const defaultLocJSX = (
     <div>
-      <h2>Esporta</h2>
-      <OfferingItem
-        chronSort={chronSort}
-        offer={{
-          ...esporta,
-          ...esporta.classes[0],
-          ...esporta.schedule[0]
-        }}
-      />
-      <OfferingItem
-        chronSort={chronSort}
-        offer={{
-          ...esporta,
-          ...esporta.classes[0],
-          ...esporta.schedule[1]
-        }}
-      />
+      <h2>{locOfferings[Object.keys(locOfferings)[0]][0].title}</h2>
+      <h3>{locOfferings[Object.keys(locOfferings)[0]][0].address}</h3>
+      {locOfferings[Object.keys(locOfferings)[0]].map((offer, i) => {
+        return (
+          <OfferingItem
+            key={i}
+            chronSort={chronSort}
+            offer={offer}
+          />
+        )
+      })}
     </div>
   )
   const [dayJSX, setDayJSX] = useState(defaultDayJSX);
@@ -48,184 +77,98 @@ export default function MobileOfferings() {
     if (value === "sunday") {
       setDayJSX(<div className={style.offerCol}>
         <h2>Sundays</h2>
-        <OfferingItem
-          chronSort={chronSort}
-          offer={{
-            ...yogaPura,
-            ...yogaPura.classes[2],
-            ...yogaPura.schedule[2]
-          }}
-        />
+        {weeklyOfferings[0].map((offer, i) => {
+          return (<OfferingItem
+            key={i}
+            chronSort={chronSort}
+            offer={offer}
+          />)
+        })}
       </div>)
     } else if (value === "monday") {
       setDayJSX(<div className={style.offerCol}>
         <h2>Mondays</h2>
-        <OfferingItem
-          chronSort={chronSort}
-          offer={{
-            ...esporta,
-            ...esporta.classes[0],
-            ...esporta.schedule[0]
-          }}
-        />
+        {weeklyOfferings[1].map((offer, i) => {
+          return (<OfferingItem
+            key={i}
+            chronSort={chronSort}
+            offer={offer}
+          />)
+        })}
       </div>)
     } else if (value === "tuesday") {
       setDayJSX(<div className={style.offerCol}>
         <h2>Tuesdays</h2>
-        <OfferingItem
-          chronSort={chronSort}
-          offer={{
-            ...healingSpace,
-            ...healingSpace.classes[0],
-            ...healingSpace.schedule[0]
-          }}
-        />
+        {weeklyOfferings[2].map((offer, i) => {
+          return (<OfferingItem
+            key={i}
+            chronSort={chronSort}
+            offer={offer}
+          />)
+        })}
       </div>)
     } else if (value === "wednesday") {
       setDayJSX(<div className={style.offerCol}>
         <h2>Wednesdays</h2>
-        <OfferingItem
-          chronSort={chronSort}
-          offer={{
-            ...esporta,
-            ...esporta.classes[0],
-            ...esporta.schedule[1]
-          }}
-        />
-        <OfferingItem
-          chronSort={chronSort}
-          offer={{
-            ...kulaYoga,
-            ...kulaYoga.classes[0],
-            ...kulaYoga.schedule[0]
-          }}
-        />
+        {weeklyOfferings[3].map((offer, i) => {
+          return (<OfferingItem
+            key={i}
+            chronSort={chronSort}
+            offer={offer}
+          />)
+        })}
       </div>)
     } else if (value === "thursday") {
       setDayJSX(<div className={style.offerCol}>
         <h2>Thursdays</h2>
-        <OfferingItem
-          chronSort={chronSort}
-          offer={{
-            ...healingSpace,
-            ...healingSpace.classes[1],
-            ...healingSpace.schedule[1]
-          }}
-        />
+        {weeklyOfferings[4].map((offer, i) => {
+          return (<OfferingItem
+            key={i}
+            chronSort={chronSort}
+            offer={offer}
+          />)
+        })}
       </div>)
     } else if (value === "friday") {
       setDayJSX(<div className={style.offerCol}>
         <h2>Fridays</h2>
-        <OfferingItem
-          chronSort={chronSort}
-          offer={{
-            ...yogaPura,
-            ...yogaPura.classes[0],
-            ...yogaPura.schedule[0]
-          }}
-        />
+        {weeklyOfferings[5].map((offer, i) => {
+          return (<OfferingItem
+            key={i}
+            chronSort={chronSort}
+            offer={offer}
+          />)
+        })}
       </div>)
     } else if (value === "saturday") {
       setDayJSX(<div className={style.offerCol}>
         <h2>Saturdays</h2>
-        <OfferingItem
-          chronSort={chronSort}
-          offer={{
-            ...yogaPura,
-            ...yogaPura.classes[1],
-            ...yogaPura.schedule[1]
-          }}
-        />
+        {weeklyOfferings[6].map((offer, i) => {
+          return (<OfferingItem
+            key={i}
+            chronSort={chronSort}
+            offer={offer}
+          />)
+        })}
       </div>)
     }
   }
   const handleLocChange = (e: React.MouseEvent<HTMLElement>, value: string) => {
-    if (value === "esporta") {
-      setLocJSX(<div className={style.offerCol}>
-        <h2>Esporta</h2>
-        <OfferingItem
-          chronSort={chronSort}
-          offer={{
-            ...esporta,
-            ...esporta.classes[0],
-            ...esporta.schedule[0]
-          }}
-        />
-        <OfferingItem
-          chronSort={chronSort}
-          offer={{
-            ...esporta,
-            ...esporta.classes[0],
-            ...esporta.schedule[1]
-          }}
-        />
-      </div>)
-    } else if (value === "healing") {
-      setLocJSX(<div className={style.offerCol}>
-        <h2><a href={healingSpace.url}>Healing Space</a></h2>
-        <OfferingItem
-          chronSort={chronSort}
-          offer={{
-            ...healingSpace,
-            ...healingSpace.classes[0],
-            ...healingSpace.schedule[0]
-          }}
-        />
-        <OfferingItem
-          chronSort={chronSort}
-          offer={{
-            ...healingSpace,
-            ...healingSpace.classes[1],
-            ...healingSpace.schedule[1]
-          }}
-        />
-      </div>)
-    } else if (value === "kula") {
-      setLocJSX(
-        <div className={style.offerCol}>
-          <h2><a href={kulaYoga.url}>Kula Yoga</a></h2>
-          <OfferingItem
-            chronSort={chronSort}
-            offer={{
-              ...kulaYoga,
-              ...kulaYoga.classes[0],
-              ...kulaYoga.schedule[0]
-            }}
-          />
-        </div>
-      )
-
-    } else if (value === "pura") {
-      setLocJSX(
-        <div className={style.offerCol}>
-          <h2><a href={yogaPura.url}>Yoga Pura</a></h2>
-          <OfferingItem
-            chronSort={chronSort}
-            offer={{
-              ...yogaPura,
-              ...yogaPura.classes[2],
-              ...yogaPura.schedule[2]
-            }}
-          />
-          <OfferingItem
-            chronSort={chronSort}
-            offer={{
-              ...yogaPura,
-              ...yogaPura.classes[0],
-              ...yogaPura.schedule[0]
-            }}
-          />
-          <OfferingItem
-            chronSort={chronSort}
-            offer={{
-              ...yogaPura,
-              ...yogaPura.classes[1],
-              ...yogaPura.schedule[1]
-            }}
-          />
-        </div>
-      )
-    }
+    setLocJSX(
+      <div className={style.offerCol}>
+        <h2>{locOfferings[value][0].title}</h2>
+        <h3>{locOfferings[value][0].address}</h3>
+        {locOfferings[value].map((offer, i) => {
+          return (
+            <OfferingItem
+              key={i}
+              chronSort={chronSort}
+              offer={offer}
+            />
+          )
+        })}
+      </div>
+    )
   }
 
   return (
@@ -280,18 +223,13 @@ export default function MobileOfferings() {
         </div> :
         <div className={style.sortMenu}>
           <ToggleButtonGroup className={style.buttonGroup} exclusive onChange={handleLocChange}>
-            <ToggleButton value={"esporta"}>
-              Esporta
-            </ToggleButton>
-            <ToggleButton value={"healing"}>
-              Healing Space
-            </ToggleButton>
-            <ToggleButton value={"kula"}>
-              Kula Yoga
-            </ToggleButton>
-            <ToggleButton value={"pura"}>
-              Yoga Pura
-            </ToggleButton>
+            {Object.keys(locOfferings).map((loc, i) => {
+              return (
+                <ToggleButton key={i} value={loc}>
+                  {loc}
+                </ToggleButton>
+              )
+            })}
           </ToggleButtonGroup>
           {locJSX}
         </div>

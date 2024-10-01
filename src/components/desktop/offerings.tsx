@@ -2,15 +2,49 @@ import { useState } from 'react';
 import globalStyle from '../../app/global.module.css';
 import { ToggleButton, ToggleButtonGroup } from '@mui/material';
 import OfferingItem from '../offeringItem';
-import { yogaPura, kulaYoga, healingSpace, esporta } from '../offeringObj';
 import style from "./offerings.module.css";
+import { offerings } from '../offeringObj';
+import { Offer } from '../offeringObj';
 
 export default function DeskOfferings() {
   const [chronSort, setChronSort] = useState(false);
+  const weeklyOfferings: Offer[][] = [[], [], [], [], [], [], []];
+  const locOfferings: { [key: string]: Offer[] } = {};
+  offerings.forEach((location) => {
+    for (let i = 0; i < location.schedule.length; i++) {
+      const classSchedule = location.schedule[i];
+      const classDetails = location.classes.find((item) => item.name === classSchedule.name)
+      const offering = {
+        ...location,
+        ...classSchedule,
+        ...classDetails
+      }
+      if (offering.day === "Sunday") {
+        weeklyOfferings[0].push(offering)
+      } else if (offering.day === "Monday") {
+        weeklyOfferings[1].push(offering)
+      } else if (offering.day === "Tuesday") {
+        weeklyOfferings[2].push(offering)
+      } else if (offering.day === "Wednesday") {
+        weeklyOfferings[3].push(offering)
+      } else if (offering.day === "Thursday") {
+        weeklyOfferings[4].push(offering)
+      } else if (offering.day === "Friday") {
+        weeklyOfferings[5].push(offering)
+      } else if (offering.day === "Saturday") {
+        weeklyOfferings[6].push(offering)
+      }
+      if (offering.title in locOfferings) {
+        locOfferings[offering.title].push(offering)
+      } else {
+        locOfferings[offering.title] = [offering];
+      }
+    }
+  })
   return (
     <div
-    className={`${globalStyle.screen} ${style.offerings}` }
-    id="offerings">
+      className={`${globalStyle.screen} ${style.offerings}`}
+      id="offerings">
       <div id={style.offeringsHeader}>
         <h2>
           Weekly Offerings
@@ -36,169 +70,103 @@ export default function DeskOfferings() {
       <div id={style.offerList}>
         {chronSort ?
           <>
+
             <div className={style.offerDay}>
               <h2>Sundays</h2>
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...yogaPura,
-                  ...yogaPura.classes[2],
-                  ...yogaPura.schedule[2]
-                }}
-              />
+              {weeklyOfferings[0].map((offer, i) => {
+                return (<OfferingItem
+                  key={i}
+                  chronSort={chronSort}
+                  offer={offer}
+                />)
+              })}
             </div>
             <div className={style.offerDay}>
               <h2>Mondays</h2>
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...esporta,
-                  ...esporta.classes[0],
-                  ...esporta.schedule[0]
-                }}
-              />
+              {weeklyOfferings[1].map((offer, i) => {
+                return (<OfferingItem
+                  key={i}
+                  chronSort={chronSort}
+                  offer={offer}
+                />)
+              })}
             </div>
             <div className={style.offerDay}>
               <h2>Tuesdays</h2>
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...healingSpace,
-                  ...healingSpace.classes[0],
-                  ...healingSpace.schedule[0]
-                }}
-              />
+              {weeklyOfferings[2].map((offer, i) => {
+                return (<OfferingItem
+                  key={i}
+                  chronSort={chronSort}
+                  offer={offer}
+                />)
+              })}
             </div>
             <div className={style.offerDay}>
               <h2>Wednesdays</h2>
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...esporta,
-                  ...esporta.classes[0],
-                  ...esporta.schedule[1]
-                }}
-              />
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...kulaYoga,
-                  ...kulaYoga.classes[0],
-                  ...kulaYoga.schedule[0]
-                }}
-              />
+              {weeklyOfferings[3].map((offer, i) => {
+                return (<OfferingItem
+                  key={i}
+                  chronSort={chronSort}
+                  offer={offer}
+                />)
+              })}
             </div>
             <div className={style.offerDay}>
               <h2>Thursdays</h2>
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...healingSpace,
-                  ...healingSpace.classes[1],
-                  ...healingSpace.schedule[1]
-                }}
-              />
+              {weeklyOfferings[4].map((offer, i) => {
+                return (<OfferingItem
+                  key={i}
+                  chronSort={chronSort}
+                  offer={offer}
+                />)
+              })}
             </div>
             <div className={style.offerDay}>
               <h2>Fridays</h2>
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...yogaPura,
-                  ...yogaPura.classes[0],
-                  ...yogaPura.schedule[0]
-                }}
-              />
+              {weeklyOfferings[5].map((offer, i) => {
+                return (<OfferingItem
+                  key={i}
+                  chronSort={chronSort}
+                  offer={offer}
+                />)
+              })}
             </div>
             <div className={style.offerDay}>
               <h2>Saturdays</h2>
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...yogaPura,
-                  ...yogaPura.classes[1],
-                  ...yogaPura.schedule[1]
-                }}
-              />
+              {weeklyOfferings[6].map((offer, i) => {
+                return (<OfferingItem
+                  key={i}
+                  chronSort={chronSort}
+                  offer={offer}
+                />)
+              })}
             </div>
           </> :
           <>
-            <div className={style.offerLoc}>
-              <h2>Esporta</h2>
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...esporta,
-                  ...esporta.classes[0],
-                  ...esporta.schedule[0]
-                }}
-              />
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...esporta,
-                  ...esporta.classes[0],
-                  ...esporta.schedule[1]
-                }}
-              />
-            </div>
-            <div className={style.offerLoc}>
-              <h2><a href={healingSpace.url}>Healing Space</a></h2>
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...healingSpace,
-                  ...healingSpace.classes[0],
-                  ...healingSpace.schedule[0]
-                }}
-              />
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...healingSpace,
-                  ...healingSpace.classes[1],
-                  ...healingSpace.schedule[1]
-                }}
-              />
-            </div>
-            <div className={style.offerLoc}>
-              <h2><a href={kulaYoga.url}>Kula Yoga</a></h2>
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...kulaYoga,
-                  ...kulaYoga.classes[0],
-                  ...kulaYoga.schedule[0]
-                }}
-              />
-            </div>
-            <div className={style.offerLoc}>
-              <h2><a href={yogaPura.url}>Yoga Pura</a></h2>
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...yogaPura,
-                  ...yogaPura.classes[2],
-                  ...yogaPura.schedule[2]
-                }}
-              />
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...yogaPura,
-                  ...yogaPura.classes[0],
-                  ...yogaPura.schedule[0]
-                }}
-              />
-              <OfferingItem
-                chronSort={chronSort}
-                offer={{
-                  ...yogaPura,
-                  ...yogaPura.classes[1],
-                  ...yogaPura.schedule[1]
-                }}
-              />
-            </div>
+            {Object.keys(locOfferings).map((loc, i) => {
+              return (
+                <div className={style.offerLoc} key={i}>
+                  <h2>
+                    <a href={locOfferings[loc][0].url}>
+                      {loc}
+                    </a>
+                  </h2>
+                  <h3>
+                    {locOfferings[loc][0].address}
+                  </h3>
+                  {locOfferings[loc].map((offer, i) => {
+                    return(
+                      <OfferingItem
+                        key={i}
+                        chronSort={chronSort}
+                        offer={offer}
+                      />
+                    )
+                  })}
+                </div>
+              )
+            })}
+
           </>}
       </div>
     </div >)

@@ -9,7 +9,7 @@ export default function OfferingItem (props: {offer: {
   address: string,
   url: string,
   name: string,
-  description: string,
+  description?: string,
   day: string,
   time: string,
 },
@@ -25,7 +25,13 @@ chronSort: boolean,
   return (
     <div className={style.offerItem}>
       <h3>
-        {props.chronSort ? <a href={props.offer.url}>{props.offer.title}</a> : <div className={style.time}>
+        {props.chronSort ? <>
+          <a href={props.offer.url}>{props.offer.title}</a>
+          <div className={style.address}>
+            {props.offer.address}
+          </div>
+          </>
+          : <div className={style.time}>
           <span>{props.offer.day}</span>
           <span>{props.offer.time}</span>
         </div>

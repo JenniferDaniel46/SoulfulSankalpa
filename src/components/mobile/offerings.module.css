@@ -8,7 +8,10 @@
 .offerings h2{
   font-size: 30px;
   font-weight: 700;
-  }
+}
+.offerings h3 {
+  font-size: 20px;
+}
 #offeringsHeader h2{
   font-size: 5vw;
 
@@ -30,7 +33,7 @@
   font-weight: bold;
   border: 2px solid var(--green);
   color: var(--green);
-  line-height: 20px;
+  line-height: 14px;
 }
 .sortMenu button {
   margin-bottom: 15px;
