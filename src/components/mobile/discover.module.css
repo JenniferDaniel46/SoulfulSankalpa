@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
 }
 
 #discoverPurpose h2 {
@@ -11,23 +10,37 @@
 }
 
 #discoverContent {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-items: center;
-  font-size: 2vh;
+  font-size: 1.9vh;
   font-weight: 500;
-  padding: 10px;
+  width: 100vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
 }
 
 .discoverText {
+  margin-top: 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 4vh;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  overflow-y: hidden;
+  height: calc(100vh - 140px);
+  margin-bottom: 6vh;
+  scroll-snap-align: center;
+  width: 100vw;
+  min-width: 100vw;
 }
-
+.arrows {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+}
 .discoverTitle {
   font-size: 2.5vh;
   font-weight: 550;
