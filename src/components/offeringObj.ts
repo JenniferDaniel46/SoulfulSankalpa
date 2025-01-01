@@ -40,7 +40,7 @@ export const offerings = [
     classes: [
       {
         name: "All Levels Practice",
-        description: " Available for Esporta and LA Fitness members: Suitable for all levels of experience, beginners welcome! We explore poses for extended time with attention on the breath, alignment and the sensations of the body. Deeper and more advanced expressions of the pose will be offered but not required for practice.",
+        description: " Available for Esporta and LA Fitness members: Suitable for all levels of experience, beginners welcome! We explore poses for extended time with attention on the breath, alignment and the sensations of the body. Deeper and more advanced expressions of the pose will be offered but not required for practice.`,
       }
     ],
     schedule: [
@@ -62,19 +62,19 @@ export const offerings = [
     url: "https://azhealingspace.com/schedule/",
     classes: [{
       name: "Gentle Somatic Morning Yoga",
-      description: `This mindful and soothing somatic yoga practice is designed to awaken your body, calm your mind, and ground you in the present moment.
+      description: `This mindful and soothing somatic yoga practice is designed to awaken your body, calm your mind, and ground you in the present moment.`
       `,
     },
     {
       name: "Yoga Nidra and Sound Bath",
       description: "Yoga Nidra is translated as “Yogic Sleep” and is an ancient meditation practice. This meditation/relaxation technique uses a mix of somatic and cognitive techniques to address a wide range of conditions. Sound healing also offers profound benefits to the body, mind and spirit.
-      It assists to balance both hemispheres of the brain, reduce stress and anxiety, increase focus and mental clarity. These practices individually do wonders for the mind and body. Together they can create an amazing practice to help invite more peace, clarity and calm not only into your day but when practiced regularly, we can feel these benefits in the long term as well."
-      `,
+      It assists to balance both hemispheres of the brain, reduce stress and anxiety, increase focus and mental clarity. These practices individually do wonders for the mind and body. Together they can create an amazing practice to help invite more peace, clarity and calm not only into your day but when practiced regularly, we can feel these benefits in the long term as well.`
+     `,
     },
     {
       
     },name: "Power Flow",
-      description: "Flow style class that builds strength and flexibility. Designed to be challenging yet accessible, movement combines breath with flowing sequences, as well as time in poses to build strength and find alignment. This class will allow you to leave feeling empowered and invigorated."
+      description: "Flow style class that builds strength and flexibility. Designed to be challenging yet accessible, movement combines breath with flowing sequences, as well as time in poses to build strength and find alignment. This class will allow you to leave feeling empowered and invigorated.`
     ],
     schedule: [
       {
@@ -101,7 +101,7 @@ export const offerings = [
     classes: [
       {
         name: "Basics",
-        description: "Class is best for beginners and welcome to all levels of practice. Basics will focus on foundation and alignment, as well as understanding the intention behind the asana."
+        description: `Class is best for beginners and welcome to all levels of practice. Basics will focus on foundation and alignment, as well as understanding the intention behind the asana.`,
       }
     ],
     schedule: [
@@ -133,7 +133,7 @@ export const offerings = [
       },
       {
         name: "Vinyasa",
-        description: "Vinyasa: This practice is best for experienced yogis; it is a more intermediate to advanced level of practice. Vinyasa uses breath to movement to flow through the practice as we move in a more vigorous way. This is a great practice to build strength, flexibility and increase your stamina. Classes are lightly heated around 80 degrees no higher than 85 degrees. "
+        description: `Vinyasa: This practice is best for experienced yogis; it is a more intermediate to advanced level of practice. Vinyasa uses breath to movement to flow through the practice as we move in a more vigorous way. This is a great practice to build strength, flexibility and increase your stamina. Classes are lightly heated around 80 degrees no higher than 85 degrees. `
       }
     ],
     schedule: [
