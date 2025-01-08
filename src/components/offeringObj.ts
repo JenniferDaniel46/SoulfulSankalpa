@@ -2,32 +2,32 @@
 const example = [
   //////// vvvvv copy below this line for new studio or location  vvvvv ////////////////
   {
-  title: "name of gym or location",
-  address: "address of class",
-  url: "https://www.website-of-location.com",
-  classes: [
-    //////// vvvvv copy below this line for new class type vvvvv ///////////////
-    {
-      name: "name of class 1",
-      description: `description of class 1`,
-    },
-    /////// ^^^^^ copy above this line for new class type ^^^^^ ////////////////
-    {
-      name: "name of class 2",
-      description: `description of class 2`
-    },
-  ],
-  schedule: [
-    /////// vvvvv copy below this line for new class time or schedule vvvvv /////////////////
-    {
-      day: "day of class ex Monday - day must be capitalized and singular",
-      time: "10:00am",
-      name: "name of class this must exactly match the name of the class entered in with the desription for the description to be tied to this class",
-    },
-    ////// ^^^^^ copy above this line for new class time or schedule ^^^^ //////////////
-  ]
-},
-//////// ^^^^^ copy above this line for new studio or location ^^^^^ //////////////////
+    title: "name of gym or location",
+    address: "address of class",
+    url: "https://www.website-of-location.com",
+    classes: [
+      //////// vvvvv copy below this line for new class type vvvvv ///////////////
+      {
+        name: "name of class 1",
+        description: `description of class 1`,
+      },
+      /////// ^^^^^ copy above this line for new class type ^^^^^ ////////////////
+      {
+        name: "name of class 2",
+        description: `description of class 2`
+      },
+    ],
+    schedule: [
+      /////// vvvvv copy below this line for new class time or schedule vvvvv /////////////////
+      {
+        day: "day of class ex Monday - day must be capitalized and singular",
+        time: "10:00am",
+        name: "name of class this must exactly match the name of the class entered in with the desription for the description to be tied to this class",
+      },
+      ////// ^^^^^ copy above this line for new class time or schedule ^^^^ //////////////
+    ]
+  },
+  //////// ^^^^^ copy above this line for new studio or location ^^^^^ //////////////////
 ]
 
 ////////// vvv List of offerings vvv /////////////
@@ -40,7 +40,7 @@ export const offerings = [
     classes: [
       {
         name: "All Levels Practice",
-        description: " Available for Esporta and LA Fitness members: Suitable for all levels of experience, beginners welcome! We explore poses for extended time with attention on the breath, alignment and the sensations of the body. Deeper and more advanced expressions of the pose will be offered but not required for practice.`,
+        description: `Available for Esporta and LA Fitness members: Suitable for all levels of experience, beginners welcome! We explore poses for extended time with attention on the breath, alignment and the sensations of the body. Deeper and more advanced expressions of the pose will be offered but not required for practice.`,
       }
     ],
     schedule: [
@@ -60,21 +60,21 @@ export const offerings = [
     title: "Healing Space Yoga Studio",
     address: "8765 W. Kelton Ln., Peoria, AZ, 85382, US",
     url: "https://azhealingspace.com/schedule/",
-    classes: [{
+    classes: [
+      {
       name: "Gentle Somatic Morning Yoga",
       description: `This mindful and soothing somatic yoga practice is designed to awaken your body, calm your mind, and ground you in the present moment.`
-      `,
+      ,
     },
     {
       name: "Yoga Nidra and Sound Bath",
-      description: "Yoga Nidra is translated as “Yogic Sleep” and is an ancient meditation practice. This meditation/relaxation technique uses a mix of somatic and cognitive techniques to address a wide range of conditions. Sound healing also offers profound benefits to the body, mind and spirit.
-      It assists to balance both hemispheres of the brain, reduce stress and anxiety, increase focus and mental clarity. These practices individually do wonders for the mind and body. Together they can create an amazing practice to help invite more peace, clarity and calm not only into your day but when practiced regularly, we can feel these benefits in the long term as well.`
-     `,
+      description: ` Yoga Nidra is translated as “Yogic Sleep” and is an ancient meditation practice. This meditation/relaxation technique uses a mix of somatic and cognitive techniques to address a wide range of conditions. Sound healing also offers profound benefits to the body, mind and spirit.
+      It assists to balance both hemispheres of the brain, reduce stress and anxiety, increase focus and mental clarity. These practices individually do wonders for the mind and body. Together they can create an amazing practice to help invite more peace, clarity and calm not only into your day but when practiced regularly, we can feel these benefits in the long term as well.`,
     },
     {
-      
-    },name: "Power Flow",
-      description: "Flow style class that builds strength and flexibility. Designed to be challenging yet accessible, movement combines breath with flowing sequences, as well as time in poses to build strength and find alignment. This class will allow you to leave feeling empowered and invigorated.`
+      name: "Power Flow",
+      description: "Flow style class that builds strength and flexibility. Designed to be challenging yet accessible, movement combines breath with flowing sequences, as well as time in poses to build strength and find alignment. This class will allow you to leave feeling empowered and invigorated."
+    },
     ],
     schedule: [
       {
@@ -160,8 +160,8 @@ export interface Offer {
   title: string,
   address: string,
   url: string,
-  classes: {name: string, description: string}[],
-  schedule: {day: string, time: string, name:string}[]
+  classes: { name: string, description: string }[],
+  schedule: { day: string, time: string, name: string }[]
   day: string,
   description?: string,
   name: string,
